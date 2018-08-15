@@ -4,7 +4,8 @@ open source real-time dashboard builder for IOT
 
 ### Demo
 http://nilinet.com
-[![Smart metering](http://www.nilinet.com/img/LOGONILINET1.png "Smart metering")](http://www.nilinet.com)
+
+[![Weather](https://raw.githubusercontent.com/alialaei110/nilinet/master/video_2018-08-15_23-37-04.gif)](http://www.nilinet.com)
 
 
 ### Hardware
