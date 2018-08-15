@@ -1,9 +1,6 @@
 # nilinet
 open source real-time dashboard builder for IOT
-### Screenshot in PC
 [![Weather](https://raw.githubusercontent.com/alialaei110/nilinet/master/aliii1111.PNG)](http://www.nilinet.com)
-### Screenshot in smartphone
-[![Weather](http://www.nilinet.com/img/LOGONILINET1.png)](http://www.nilinet.com)
 
 ### Demo
 http://nilinet.com
