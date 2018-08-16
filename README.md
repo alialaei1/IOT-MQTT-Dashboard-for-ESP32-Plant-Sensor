@@ -17,7 +17,7 @@ The easiest way to test that node is installed is to run the "version" command i
 
 ### File Structure
 
-Within the download you'll find the following directories and files:
+directories and files:
 
 ```
 material-dashboard/
