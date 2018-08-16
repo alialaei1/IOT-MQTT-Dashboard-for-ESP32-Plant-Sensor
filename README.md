@@ -11,7 +11,7 @@
 2. The easiest way to test that node is installed is to run the "version" command in your terminal/command prompt and check that a version string is returned:
 ```node -v``` and Nodejs package manager NPM should also have been installed, can be tested in the same way:
 ```npm -v```
-3. The next step you have downloaded and installed MongoDB, following this [guide](https://nodepressjs.com/install-mongodb). (tested on mongodb-win32-i386-2.6.8)
+3. The next step you have downloaded and installed MongoDB, following this [guide](https://nodepressjs.com/install-mongodb). (tested on 'mongodb-win32-i386-2.6.8')
 4. 
 5. After that, run your web server using ```node app.js```, visit http://localhost:3000, and you will see a message 'Hello World'
 
