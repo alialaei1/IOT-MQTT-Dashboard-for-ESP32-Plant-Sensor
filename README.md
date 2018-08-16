@@ -8,7 +8,7 @@
 
 ### Getting Started
 open source real-time dashboard builder for IOT
-
+Once you have downloaded and installed Node.js on your computer. The official Node.js website has installation instructions for Node.js: https://nodejs.org
 After that, run your web server using```node app.js```, visit http://localhost:3000, and you will see a message 'Hello World'
 
 
