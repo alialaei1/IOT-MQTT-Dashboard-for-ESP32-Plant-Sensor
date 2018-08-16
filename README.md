@@ -1,6 +1,6 @@
 # nilinet
 
-Nilinet is an open-source IoT dashboard for device management, smart system, visualization, and energy management system.Nilinet enables device connectivity via standard protocol, for example WebSocket
+Nilinet is an open-source IoT dashboard for device management, smart system, visualization, and energy management system. Nilinet enables device connectivity via standard protocol, for example WebSocket
 
 [![Weather](https://raw.githubusercontent.com/alialaei110/nilinet/master/aliii1111.PNG)](http://www.nilinet.com)
 
