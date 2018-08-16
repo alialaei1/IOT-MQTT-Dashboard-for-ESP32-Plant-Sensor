@@ -15,13 +15,50 @@ The easiest way to test that node is installed is to run the "version" command i
 4. 
 5. After that, run your web server using ```node app.js```, visit http://localhost:3000, and you will see a message 'Hello World'
 
+### File Structure
+
+Within the download you'll find the following directories and files:
+
+```
+material-dashboard/
+├── assets/
+|   ├── css/
+|   |   ├── bootstrap.min.css
+|   |   ├── material-dashboard.css
+|   |   ├── material-dashboard-rtl.css
+|   |   └── demo.css
+|   ├── js/
+|   |   ├── bootstrap-notify.js
+|   |   ├── bootstrap.min.js
+|   |   ├── chartist.min.js
+|   |   ├── demo.js
+|   |   ├── jquery-3.1.0.min.js
+|   |   ├── material-dashboard.js
+|   |   └── material.min.js
+|   ├── sass/
+|   |    ├── md
+|   |    └── material-dashboard.scss
+|   └── img/
+|
+├── documentation/
+├── examples/
+
+```
 
 ### Hardware
 open source real-time dashboard builder for IOT
 
-
+## Resources
+- Demo: https://demos.creative-tim.com/material-dashboard/examples/dashboard.html
+- Download Page: https://www.creative-tim.com/product/material-dashboard
+- Documentation: https://demos.creative-tim.com/material-dashboard/docs/2.0/getting-started/introduction.html
+- License Agreement: https://www.creative-tim.com/license
+- Support: https://www.creative-tim.com/contact-us
+- Issues: [Github Issues Page](https://github.com/creativetimofficial/material-dashboard/issues)
+- [Material Kit - For Front End Development](https://www.creative-tim.com/product/material-kit?ref=github-md-free)
 
 ### License
-open source real-time dashboard builder for IOT
+- Copyright 2018 Creative Tim (https://www.creative-tim.com)
+- Licensed under MIT (https://github.com/creativetimofficial/material-dashboard/blob/master/LICENSE.md)
 
 ### More Information
