@@ -1,4 +1,4 @@
-# nilinet
+# NILINET
 
 [nilinet](http://www.nilinet.com) is an open-source IoT dashboard for device management, smart system, visualization, and energy management system. [nilinet](http://www.nilinet.com) enables device connectivity via standard protocol, for example WebSocket. [nilinet](http://www.nilinet.com) use [MongoDB](https://www.mongodb.com/), that’s open-source, scalable and flexible database. MongoDB stores data in JSON-like documents that can vary in structure. 
 
@@ -24,7 +24,7 @@ This command is finding a json file named as 'package.js' to install all depende
 5. Now run web server using ```npm start```, you can visit http://localhost:8076 in your browser.
 
 
-### Hardware
+### Nilinet Hardware
 open source real-time dashboard builder for IOT
 
 ### File Structure
