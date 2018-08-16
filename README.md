@@ -8,7 +8,7 @@
 
 ### Getting Started
 1. Once you have downloaded and installed Node.js on your computer. The official Node.js website has installation instructions for Node.js: https://nodejs.org
-2. The easiest way to test that node is installed is to run the "version" command in your terminal/command prompt and check that a version string is returned:```node -v``` and Nodejs package manager NPM should also have been installed, and can be tested in the same way:
+2. The easiest way to test that node is installed is to run the "version" command in your terminal/command prompt and check that a version string is returned:```node -v``` and Nodejs package manager NPM should also have been installed, can be tested in the same way:
 ```npm -v```
 3. This website uses MongoDB
 4. 
