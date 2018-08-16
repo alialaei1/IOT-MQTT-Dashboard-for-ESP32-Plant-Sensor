@@ -12,7 +12,7 @@
 ```npm -v```
 3. This website uses MongoDB
 4. 
-5. After that, run your web server using```node app.js```, visit http://localhost:3000, and you will see a message 'Hello World'
+5. After that, run your web server using ```node app.js```, visit http://localhost:3000, and you will see a message 'Hello World'
 
 
 ### Hardware
