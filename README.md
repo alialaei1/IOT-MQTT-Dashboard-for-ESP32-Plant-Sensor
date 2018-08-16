@@ -15,6 +15,10 @@ The easiest way to test that node is installed is to run the "version" command i
 4. 
 5. After that, run your web server using ```node app.js```, visit http://localhost:3000, and you will see a message 'Hello World'
 
+
+### Hardware
+open source real-time dashboard builder for IOT
+
 ### File Structure
 
 files and directories:
@@ -44,9 +48,6 @@ material-dashboard/
 ├── examples/
 
 ```
-
-### Hardware
-open source real-time dashboard builder for IOT
 
 ### Resources
 - Demo: http://nilinet.com
