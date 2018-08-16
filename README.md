@@ -1,6 +1,6 @@
 # nilinet
 
-[nilinet](http://www.nilinet.com) is an open-source IoT dashboard for device management, smart system, visualization, and energy management system. [nilinet](http://www.nilinet.com) enables device connectivity via standard protocol, for example WebSocket. 
+[nilinet](http://www.nilinet.com) is an open-source IoT dashboard for device management, smart system, visualization, and energy management system. [nilinet](http://www.nilinet.com) enables device connectivity via standard protocol, for example WebSocket.
 
 [![Weather](https://raw.githubusercontent.com/alialaei110/nilinet/master/aliii1111.PNG)](http://www.nilinet.com)
 
@@ -8,6 +8,9 @@
 
 ### Getting Started
 open source real-time dashboard builder for IOT
+
+After that, run your web server using```node app.js```, visit http://localhost:3000, and you will see a message 'Hello World'
+
 
 ### Hardware
 open source real-time dashboard builder for IOT
