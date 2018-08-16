@@ -21,7 +21,7 @@ This command is finding a json file named as 'package.js' to install all depende
 
 5. After that, you need to defined hostname and port number, here we use localhost i.e 127.0.0.1 and port number 8076. port number configured in file: 'nilinet/bin/www' (it can vary based on your preferences)
 
-5. After that, run web server using ```npm start```, you can visit http://localhost:3000 in your browser.
+5. Now run web server using ```npm start```, you can visit http://localhost:3000 in your browser.
 
 
 ### Hardware
