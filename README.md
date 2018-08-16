@@ -19,7 +19,7 @@ The easiest way to test that node is installed is to run the 'version' command i
 ```npm install```
 This command is finding a json file named as 'package.js' to install all dependencies defined in the file.
 
-5. After that, run web server using ```npm start```, visit http://localhost:3000.
+5. After that, run web server using ```npm start```, you can visit http://localhost:3000 in your browser.
 
 
 ### Hardware
