@@ -1,6 +1,6 @@
 # nilinet
 
-[nilinet](http://www.nilinet.com) is an open-source IoT dashboard for device management, smart system, visualization, and energy management system. [nilinet](http://www.nilinet.com) enables device connectivity via standard protocol, for example WebSocket. [nilinet](http://www.nilinet.com) uses [MongoDB](https://www.mongodb.com/), that’s open-source, scalable and flexible database. MongoDB stores data in JSON-like documents that can vary in structure. 
+[nilinet](http://www.nilinet.com) is an open-source IoT dashboard for device management, smart system, visualization, and energy management system. [nilinet](http://www.nilinet.com) enables device connectivity via standard protocol, for example WebSocket. [nilinet](http://www.nilinet.com) use [MongoDB](https://www.mongodb.com/), that’s open-source, scalable and flexible database. MongoDB stores data in JSON-like documents that can vary in structure. 
 
 [![Weather](https://raw.githubusercontent.com/alialaei110/nilinet/master/aliii1111.PNG)](http://www.nilinet.com)
 
