@@ -48,14 +48,10 @@ material-dashboard/
 ### Hardware
 open source real-time dashboard builder for IOT
 
-## Resources
-- Demo: https://demos.creative-tim.com/material-dashboard/examples/dashboard.html
-- Download Page: https://www.creative-tim.com/product/material-dashboard
-- Documentation: https://demos.creative-tim.com/material-dashboard/docs/2.0/getting-started/introduction.html
+### Resources
+- Demo: http://nilinet.com
+- Documentation: https://github.com/alialaei110/nilinet
 - License Agreement: https://www.creative-tim.com/license
-- Support: https://www.creative-tim.com/contact-us
-- Issues: [Github Issues Page](https://github.com/creativetimofficial/material-dashboard/issues)
-- [Material Kit - For Front End Development](https://www.creative-tim.com/product/material-kit?ref=github-md-free)
 
 ### License
 - Copyright 2018 Creative Tim (https://www.creative-tim.com)
