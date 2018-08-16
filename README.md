@@ -8,13 +8,13 @@
 
 ### Getting Started
 1. Once you have downloaded and installed Node.js on your computer. The official Node.js website has installation instructions for Node.js: https://nodejs.org. 
-The easiest way to test that node is installed is to run the "version" command in your terminal/command prompt and check that a version string is returned:
+The easiest way to test that node is installed is to run the 'version' command in your terminal/command prompt and check that a version string is returned:
 ```node -v``` and Nodejs package manager NPM should also have been installed, can be tested in the same way:
 ```npm -v```
 2. The next step you have downloaded and installed MongoDB, following this [guide](https://nodepressjs.com/install-mongodb). (tested on 'mongodb-win32-i386-2.6.8')
 4. To load dependencies we have to run a command in nilinet directory:
 ```npm install```
-This command is finding a json file named as `package.json` to install all dependencies defined in the file.
+This command is finding a json file named as 'package.js' to install all dependencies defined in the file.
 5. After that, run your web server using ```npm start```, visit http://localhost:3000, and you will see a message 'Hello World'
 
 
