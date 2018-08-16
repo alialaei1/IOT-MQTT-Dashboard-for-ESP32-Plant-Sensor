@@ -19,7 +19,7 @@ The easiest way to test that node is installed is to run the 'version' command i
 ```npm install```
 This command is finding a json file named as 'package.js' to install all dependencies defined in the file.
 
-5. After that, you need to defined hostname and port number, here we use localhost i.e 127.0.0.1 and port number 8076(it can vary based on your preferences).port number Configured in file 'nilinet/bin/www'.
+5. After that, you need to defined hostname and port number, here we use localhost i.e 127.0.0.1 and port number 8076. port number configured in file:'nilinet/bin/www'(it can vary based on your preferences)
 
 5. After that, run web server using ```npm start```, you can visit http://localhost:3000 in your browser.
 
