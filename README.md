@@ -55,7 +55,7 @@ open source real-time dashboard builder for IOT
 6.  Don't forget to select your ESP8266 board from Tools > Board menu
    after installation.
    
-7.  you have aded WebSocket Arduino libary. get it from [arduinoWebSockets](https://github.com/Links2004/arduinoWebSockets). 
+7.  you have downloaded and added WebSocket Arduino libary. get it from [arduinoWebSockets](https://github.com/Links2004/arduinoWebSockets). 
    
 ### File Structure
 
