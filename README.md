@@ -27,6 +27,31 @@ This command is finding a json file named as 'package.js' to install all depende
 ### Nilinet Hardware
 open source real-time dashboard builder for IOT
 
+#### Prerequisites
+
+1.  Arduino 1.8.4, get it from [Arduino website](https://www.arduino.cc/en/Main/OldSoftwareReleases#previous)
+
+2.  Internet connection
+
+#### Instructions
+
+1.  Start Arduino and open Preferences window.
+
+2.  Enter
+   ``http://arduino.esp8266.com/stable/package_esp8266com_index.json``
+   into *Additional Board Manager URLs* field. You can add multiple
+   URLs, separating them with commas.
+   
+3.  Open Boards Manager from Tools > Board menu and find *esp8266*
+   platform.
+   
+4.  Select the version you need from a drop-down box.
+
+5.  Click *install* button.
+
+6.  Don't forget to select your ESP8266 board from Tools > Board menu
+   after installation.
+   
 ### File Structure
 
 files and directories:
