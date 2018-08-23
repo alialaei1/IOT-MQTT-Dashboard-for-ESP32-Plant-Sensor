@@ -27,6 +27,7 @@ This command is finding a json file named as 'package.js' to install all depende
 ### Nilinet Hardware
 open source real-time dashboard builder for IOT
 
+If this is your first time installing the ESP32 on the Arduino IDE, simply follow the installation procedure described below.
 #### Prerequisites
 
 1.  Arduino 1.8.4, get it from [Arduino website](https://www.arduino.cc/en/Main/OldSoftwareReleases#previous)
