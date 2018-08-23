@@ -31,7 +31,8 @@ open source real-time dashboard builder for IOT
 
 1.  Arduino 1.8.4, get it from [Arduino website](https://www.arduino.cc/en/Main/OldSoftwareReleases#previous)
 
-2.  downloaded WebSocket Arduino libary. get it from [arduinoWebSockets](https://github.com/Links2004/arduinoWebSockets). 
+2.  This esp8266 project is dependent on the [arduinoWebSockets](https://github.com/Links2004/arduinoWebSockets)
+ library to function properly.
 
 3.  Internet connection
 
