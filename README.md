@@ -27,31 +27,95 @@ TTGO-T-HIGrow [link]( https://github.com/pesor/TTGO-T-HIGrow)
 
 
 
-### How to run project
-1. Copy all folders in one directory
-2. Before running project make sure <code>Python3</code> is installed in your PC
-3. Run <code>CMD</code>
-4. Go to that directory with command for example ‘ f: ’ and press enter to go to drive F write your driver instead of ‘ f ’
-5. Install <code>Django</code> and other libs in <code>requirements.txt</code> using <code>pip install -r requirements.txt</code>
-6. Download and install <code>MongoDB</code> from <a href="https://www.mongodb.com/try/download/community?tck=docs_server">here</a>
-7. In the ptoject folder Run the project using <code>python manage.py runserver</code>
-8. If you got an error before running server run command : <code>python manage.py makemigrations</code> and <code>python manage.py migrate</code>
-9. If you had another version of python write python<version> instead of python
-  10. Try step 7 again
-  11. if project runs successfully it will return such following message:
-  <pre>
-    Watching for file changes with StatReloader
-    Performing system checks...
-    System check identified no issues (0 silenced).
-    migrations for app(s): admin, auth, contenttypes, sessions.
-    Run 'python manage.py migrate' to apply them.
-    August 12, 2021 - 16:50:28
-    
-    Django version 3.2.6, using settings 'projectname.settings'
-    Starting development server at http://127.0.0.1:8000/
-    Quit the server with CTRL-BREAK.
-  </pre>
-  12. Go to http://localhost:8000 and see the website
 
-## Help
-If you are using other versions of django make sure to install last version on a vertualenv
+## How to Run
+
+This Django project is designed to be easy to set up and run. Here are the steps you need to follow to get started:
+
+### Prerequisites
+Before you can run this Django project, you need to have the following software installed:
+
+Python 3.6 or later
+
+### Installation
+
+To install this Django project, follow these steps:
+
+1- Clone the project repository to your local machine using the command:
+```sh
+git clone https://github.com/alialaei110/Interactive-User-Guides-Template.git
+```
+2- Navigate to the project directory using the command:
+```sh
+cd Interactive-User-Guides-Template
+```
+3- Create a virtual environment and activate it using the following commands:
+```sh
+python -m venv env
+source env/Scripts/activate
+```
+4- Install the project dependencies using the command:
+```sh
+pip install -r requirements.txt
+```
+
+
+
+### Running the Project
+
+for the first time, before running server run commands:
+
+```sh
+python manage.py makemigrations
+```
+```sh
+python manage.py migrate
+```
+
+Once you have installed and configured the Django project, you can run it using the following command:
+
+```sh
+python manage.py runserver
+```
+
+This command will start the Django development server, and you should be able to access the project by navigating to ```http://127.0.0.1:8000/``` in your web browser.
+
+That's it! You should now have this Django project up and running on your local machine.
+
+
+### Create user for the first time
+
+create a superuser by writing the following command:
+```sh
+python manage.py createsuperuser
+```
+We then write the following credentials step by step. We can fill these credentials according to our preferences:
+
+```sh
+Username: admin
+Email address: admin@gmail.com
+Password: ********
+Password (again): ********
+```
+Note: After filling a row, press “Enter” to fill the other information.
+
+Now the superuser will be created if we have entered all fields correctly.
+
+## How to Use
+
+### Create and edit data
+Open your web browser and navigate to ```http://127.0.0.1:8000/admin/```. Log in using the superuser account that you created in Previous step. You should now be able to manage your datas through the admin site.
+
+
+| Section       | Description |
+| ----------- | ----------- |
+| Users      | In this section, you can manage users (add or delete)       |
+| Topic   | In this section, you can create the main topics for which you want to raise questions or issues, for example: training a specific device or a specific topic of an application. Note that by choosing a unique link for your topic, you can share it through the link or QR code.        |
+| Questions   | In this section, you can create as many questions as you want for each type, for example: training on turning on the device or training on connecting the device to the Internet or training on registering on the website        |
+| Answers   | In this section you can create an answer for each question, on the answer page you can use video, photos, fonts and various colors like a weblog.        |
+
+## License
+MIT
+
+**Free Software!**
+
