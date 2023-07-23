@@ -20,7 +20,7 @@
 @font-face {
     font-family: 'Iran-SansDN-Light';
     src: url('../fonts/IRANsanDN/IRANSansDN_Light/IRANSansDN_Light.eot');
-    src: url('../fonts/IRANsanDN/IRANSansDN_Light/IRANSansDN_Light.eot?#iefix') format('embedded-opentype'), url('../fonts/IRANsanDN/IRANSansDN_Light/IRANSansDN_Light.woff') format('woff'), url('../fonts/IRANsanDN/IRANSansDN_Light/IRANSansDN_Light.ttf') format('truetype'), url('../fonts/IRANsanDN/IRANSansDN_Light/IRANSansDN_Light.svg') format('svg');
+    src: url('../fonts/IRANsanDN/IRANSansDN_Light/IRANSansDN_Light.eot?#iefix') format('embedded-opentype'), url('../fonts/IRANsanDN/IRANSansDN_Light/IRANSansDN_Light.woff') format('woff'), url('..IRANSansDN_Light/IRANSansDN_Light.ttf') format('truetype'), url('../fonts/IRANsanDN/IRANSansDN_Light/IRANSansDN_Light.svg') format('svg');
     font-weight: light;
     font-style: light;
 }

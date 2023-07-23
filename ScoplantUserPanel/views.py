@@ -15,7 +15,7 @@ from django.http import HttpResponse
 import pathlib
 from django.http import FileResponse
 from django.template.loader import get_template
-from xhtml2pdf import pisa
+# from xhtml2pdf import pisa
 import openpyxl
 from openpyxl.styles import PatternFill, Font
 from .mqtt import subscriber, publisher
@@ -533,8 +533,8 @@ def reporting_device(request, device_id):
                 # Create file on server
                 file = open(f'temp/{file_name_gen}.pdf', "w+b")
                 # Set Encoding and other values
-                pisa.CreatePDF(html.encode('utf-8'),
-                               dest=file, encoding='utf-8')
+                # pisa.CreatePDF(html.encode('utf-8'),
+                #                dest=file, encoding='utf-8')
                 file.seek(0)
                 # set file info on pdf var
                 pdf = file.read()

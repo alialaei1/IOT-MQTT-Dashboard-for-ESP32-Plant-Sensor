@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Iran-SansDN';
     src: url('../fonts/IRANsanDN/IRANSansDN/IRANSansDN.eot');
-    src: url('../fonts/IRANsanDN/IRANSansDN/IRANSansDN.eot?#iefix') format('embedded-opentype'), url('../fonts/IRANsanDN/IRANSansDN/IRANSansDN.woff') format('woff'), url('../fonts/IRANsanDN/IRANSansDN/IRANSansDN.ttf') format('truetype'), url('../fonts/IRANsanDN/IRANSansDN/IRANSansDN.svg') format('svg');
+    src: url('../fonts/IRANsanDN/IRANSansDN/IRANSansDN.eot?#iefix') format('embedded-opentype'), url('..IRANSansDN/IRANSansDN.woff') format('woff'), url('../fonts/IRANsanDN/IRANSansDN/IRANSansDN.ttf') format('truetype'), url('../fonts/IRANsanDN/IRANSansDN/IRANSansDN.svg') format('svg');
     font-weight: 500px;
     font-style: normal;
 }
