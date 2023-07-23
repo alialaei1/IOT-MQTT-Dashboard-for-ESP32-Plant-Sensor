@@ -2,13 +2,13 @@
 <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" target="_blank" /></div>
 
 
-The IOT MQTT Dashboard for ESP32 Plant Sensor is a project that aims to provide a user-friendly interface for monitoring and managing plant growth using an ESP32-based sensor device. This project utilizes the MQTT protocol for efficient communication between the sensor device and the dashboard, allowing real-time updates on the status of the plants being monitored.
+The IoT MQTT Django dashboard for ESP32 (TTGO T-Higrow) is a project that provides a web-based dashboard for monitoring and controlling environmental conditions using an ESP32-based sensor device. The project utilizes the MQTT protocol for seamless communication between the sensor device and the dashboard, allowing real-time updates on the status of the environment being monitored.
 
-The ESP32 Plant Sensor device is equipped with sensors that measure various parameters such as temperature, humidity, soil moisture, and light intensity. These measurements are transmitted to the MQTT broker, which then forwards the data to the dashboard for visualization. The dashboard is designed to display the data in a user-friendly manner, allowing users to monitor the growth conditions of their plants at a glance.
+The TTGO T-Higrow device is equipped with sensors that measure various environmental parameters such as temperature, humidity, and light intensity. These measurements are transmitted to the MQTT broker, which then forwards the data to the Django backend for processing. The Django backend is responsible for storing and processing the data, as well as handling user authentication and authorization.
 
-The dashboard also features various controls that allow users to adjust the settings of the sensor device, such as the frequency of data transmission and the threshold values for triggering alerts. These controls are implemented using MQTT topics, making it easy to modify the settings remotely.
+The web-based dashboard is designed using Django's templating system and is optimized for desktop and mobile devices. The dashboard displays the data in an intuitive and user-friendly manner, allowing users to monitor the environmental conditions at a glance. The dashboard also features controls that allow users to adjust the settings of the sensor device, such as the frequency of data transmission and the threshold values for triggering alerts.
 
-Overall, the IOT MQTT Dashboard for ESP32 Plant Sensor provides a powerful yet easy-to-use solution for monitoring and managing plant growth using IoT technology. With its intuitive interface and efficient communication protocol, this project is sure to be a valuable tool for plant enthusiasts and researchers alike.
+Overall, the IoT MQTT Django dashboard for ESP32 (TTGO T-Higrow) provides a powerful and flexible solution for monitoring and controlling environmental conditions using IoT technology. With its web-based interface, efficient communication protocol, and REST API, this project is sure to be a valuable tool for environmental enthusiasts and researchers.
 
 
 ### How to run project
