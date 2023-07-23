@@ -101,19 +101,6 @@ Note: After filling a row, press “Enter” to fill the other information.
 
 Now the superuser will be created if we have entered all fields correctly.
 
-## How to Use
-
-### Create and edit data
-Open your web browser and navigate to ```http://127.0.0.1:8000/admin/```. Log in using the superuser account that you created in Previous step. You should now be able to manage your datas through the admin site.
-
-
-| Section       | Description |
-| ----------- | ----------- |
-|       |   |
-|    |   |
-|   |    |
-|     |      |
-
 
 ## License
 [MIT License](LICENSE)
