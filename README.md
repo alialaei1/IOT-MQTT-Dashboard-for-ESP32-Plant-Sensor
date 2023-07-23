@@ -16,7 +16,9 @@ The TTGO-T-HIGrow project is an open-source hardware and software solution for m
 
 The project is based on open-source principles, and all resources and designs are freely available to the community. The project encourages collaboration and knowledge sharing, and welcomes contributions from users of all levels of experience.
 
-https://github.com/pesor/TTGO-T-HIGrow
+### Resources
+[link]( https://github.com/pesor/TTGO-T-HIGrow)
+
 
 
 
