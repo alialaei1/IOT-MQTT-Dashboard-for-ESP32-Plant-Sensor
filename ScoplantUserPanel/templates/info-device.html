@@ -12,7 +12,7 @@
             <!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-left">
-                    <li class="breadcrumb-item"><a href="/">خانه</a></li>
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
                     <li class="breadcrumb-item active">{{ title }}</li>
                 </ol>
             </div>
@@ -32,16 +32,16 @@
         <div class="card-primary card-outline">
             <div class="text-right">
                 <br>
-                <label for="device-name">نام دستگاه: <span class="form-control-lg col-2 text-primary">{{ deviceqs.Name }}</span></label>
+                <label for="device-name">Device name: <span class="form-control-lg col-2 text-primary">{{ deviceqs.Name }}</span></label>
 
 
-                <label for="device-name">محل دستگاه: <span class="form-control-lg col-2 text-primary">{{ deviceqs.Location}}</span></label>
+                <label for="device-name">Device location: <span class="form-control-lg col-2 text-primary">{{ deviceqs.Location}}</span></label>
 
 
-                <label for="device-name">تاریخ ثبت: <span class="form-control-lg col-2 text-primary">{{ date_fa }}</span></label>
+                <label for="device-name">Date of Registration: <span class="form-control-lg col-2 text-primary">{{ date_fa }}</span></label>
 
 
-                <label for="device-name">ورژن دستگاه: <span class="form-control-lg col-2 text-primary">{{ deviceqs.Version}}</span></label>
+                <label for="device-name">Device version: <span class="form-control-lg col-2 text-primary">{{ deviceqs.Version}}</span></label>
 
                 <br>
             </div>
@@ -54,7 +54,7 @@
     <div class="col-md-12">
         <div class="card card-info">
             <div class="card-header">
-                <h3 class="card-title">نمونه گیری هر {{ deviceqs.Sampling_Rate }} دقیقه</h3>
+                <h3 class="card-title">Sampling each {{ deviceqs.Sampling_Rate }} minutes</h3>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
@@ -66,7 +66,7 @@
                             <!-- /btn-group -->
                             {{ log_sample.Sampling_Rate }}
                             <div class="input-group-append">
-                                <button type="submit" class="btn btn-outline-success">ذخیره</button>
+                                <button type="submit" class="btn btn-outline-success">Store</button>
                             </div>
                         </div>
                     </div>
@@ -89,7 +89,7 @@
             <div class="small-box battery-color">
                 <div class="inner">
                     <h3>{{last_data.Battery_Log}}<sup style="font-size: 20px">%</sup></h3>
-                    <p>باطری</p>
+                    <p>Battery</p>
                 </div>
                 <div class="icon">
                     <i class="fa fa-battery-full" aria-hidden="true"></i>
@@ -104,7 +104,7 @@
             <div class="small-box light-color">
                 <div class="inner">
                     <h3>{{last_data.Lux_Log}}<sup style="font-size: 20px">lux</sup></h3>
-                    <p>نور</p>
+                    <p>light</p>
                 </div>
                 <div class="icon">
                     <i class="fa fa-sun-o " aria-hidden="true"></i>
@@ -118,7 +118,7 @@
             <div class="small-box rh-color">
                 <div class="inner">
                     <h3>{{last_data.Humidity_Log}}<sup style="font-size: 20px">RH</sup></h3>
-                    <p>رطوبت</p>
+                    <p>Humidity</p>
                 </div>
                 <div class="icon">
                     <i class="fa fa-tint" aria-hidden="true"></i>
@@ -132,7 +132,7 @@
             <div class="small-box tempurture-color">
                 <div class="inner">
                     <h3>{{last_data.Temperature_Log}}<sup style="font-size: 20px">°C</sup></h3>
-                    <p>دما</p>
+                    <p>Temperature</p>
                 </div>
                 <div class="icon">
                     <i class="fa fa-thermometer-half"></i>
@@ -146,7 +146,7 @@
             <div class="small-box rhe-color">
                 <div class="inner">
                     <h3>{{last_data.SoilMoisture_Log}}<sup style="font-size: 20px">RH</sup></h3>
-                    <p>رطوبت خاک</p>
+                    <p>Soil moisture</p>
                 </div>
                 <div class="icon">
                     <i class="fa fa-spinner"></i>
@@ -160,7 +160,7 @@
             <div class="small-box ground-temp-color">
                 <div class="inner">
                     <h3>{{last_data.SoilTemperature_Log}}<sup style="font-size: 20px">°C</sup></h3>
-                    <p>دمای خاک</p>
+                    <p>Soil temperature</p>
                 </div>
                 <div class="icon">
                     <i class="fa fa-globe "></i>
@@ -190,13 +190,13 @@
             <div class="card">
               <div class="card-header d-flex p-0">
                 <ul id="tabs_chart" class="nav nav-pills ml-auto p-2">
-                  <li class="nav-item"><a id="Lux_tab" onclick="ChangeTabColor(this)" class="nav-link light-color" href="#tab_1" data-toggle="tab">شدت ‌نور</a></li>
-                  <li class="nav-item"><a id="Humidity_tab" onclick="ChangeTabColor(this)" class="nav-link" href="#tab_2" data-toggle="tab">رطوبت</a></li>
-                  <li class="nav-item"><a id="Temperature_tab" onclick="ChangeTabColor(this)" class="nav-link" href="#tab_3" data-toggle="tab">دما</a></li>
-                  <li class="nav-item"><a id="SoilMoisture_tab" onclick="ChangeTabColor(this)" class="nav-link" href="#tab_4" data-toggle="tab">رطوبت‌خاک</a></li>
-                  <li class="nav-item"><a id="SoilTemperature_tab" onclick="ChangeTabColor(this)" class="nav-link" href="#tab_5" data-toggle="tab">دمای‌خاک</a></li>
+                  <li class="nav-item"><a id="Lux_tab" onclick="ChangeTabColor(this)" class="nav-link light-color" href="#tab_1" data-toggle="tab">light intensity</a></li>
+                  <li class="nav-item"><a id="Humidity_tab" onclick="ChangeTabColor(this)" class="nav-link" href="#tab_2" data-toggle="tab">humidity</a></li>
+                  <li class="nav-item"><a id="Temperature_tab" onclick="ChangeTabColor(this)" class="nav-link" href="#tab_3" data-toggle="tab">temperature</a></li>
+                  <li class="nav-item"><a id="SoilMoisture_tab" onclick="ChangeTabColor(this)" class="nav-link" href="#tab_4" data-toggle="tab">soil moisture</a></li>
+                  <li class="nav-item"><a id="SoilTemperature_tab" onclick="ChangeTabColor(this)" class="nav-link" href="#tab_5" data-toggle="tab">soil temperature</a></li>
                   <li class="nav-item"><a id="EC_tab" onclick="ChangeTabColor(this)" class="nav-link" href="#tab_6" data-toggle="tab">EC</a></li>
-                  <li class="nav-item"><a id="Total_tab" onclick="ChangeTabColor(this)" class="nav-link" href="#tab_7" data-toggle="tab">نمودار جامع</a></li>
+                  <li class="nav-item"><a id="Total_tab" onclick="ChangeTabColor(this)" class="nav-link" href="#tab_7" data-toggle="tab">Comprehensive diagram</a></li>
                 </ul>
               </div><!-- /.card-header -->
               <div class="card-body">
@@ -233,7 +233,7 @@
           </div>
 
     <div class="card-footer" style="float: none; margin: auto; text-align: center;">
-        <a href="/reports/{{device_id}}"><button type="submit" class="btn btn-success"><i class="fa fa-save"></i> گزارش‌گیری</button></a>
+        <a href="/reports/{{device_id}}"><button type="submit" class="btn btn-success"><i class="fa fa-save"></i>Reporting</button></a>
     </div>
 
 </section>

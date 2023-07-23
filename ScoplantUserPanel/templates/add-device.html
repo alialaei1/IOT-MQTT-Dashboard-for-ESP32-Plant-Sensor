@@ -11,7 +11,7 @@
             <!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-left">
-                    <li class="breadcrumb-item"><a href="/">خانه</a></li>
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
                     <li class="breadcrumb-item active">{{ title }}</li>
                 </ol>
             </div>
@@ -30,23 +30,23 @@
             {% if activated_before %}
             <div class="alert alert-danger alert-dismissible active-error" style="width: 100%;height: 50px; margin: auto;">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                <p> این دستگاه قبلا فعال شده است</p>
+                <p> This device is already activated.</p>
             </div>
             {% endif %} {% if wrong_information %}
             <div class="alert alert-danger alert-dismissible active-error" style="width: 100%;height: 50px; margin: auto;">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                <p> دستگاهی با اطلاعات وارد شده یافت نشد</p>
+                <p>A device with the entered information was not found.</p>
             </div>
             {% endif %} {% if invalid_username %}
             <div class="alert alert-danger alert-dismissible active-error" style="width: 100%;height: 50px; margin: auto;">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                <p> کاراکتر غیرمجاز! دوباره تلاش کنید</p>
+                <p>Illegal character! Try again</p>
             </div>
             {% endif %}
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">دستگاه های ثبت شده</h3>
+                        <h3 class="card-title">Registered devices</h3>
 
                     </div>
                     <!-- /.card-header -->
@@ -54,17 +54,16 @@
                         <table class="table table-hover text-center">
                             {% if number_of_devices > 0 %}
                             <tr>
-                                <th>شماره</th>
-                                <th>نام دستگاه</th>
-                                <th>نام کاربری</th>
-                                <th>تاریخ ثبت</th>
-                                <th>محل دستگاه</th>
-                                <th>ورژن دستگاه</th>
-
-                                <th>وضعیت</th>
-                                <th>جزئیات</th>
+                                <th>No</th>
+                                <th>device name</th>
+                                <th>username</th>
+                                <th>Registration date</th>
+                                <th>device location</th>
+                                <th>device version</th>
+                                <th>Status</th>
+                                <th>Details</th>
                                 <!-- <th>ویرایش</th> -->
-                                <th>حذف</th>
+                                <th>Delete</th>
                             </tr>
                             {% for device in device_info %} {% if device.User == user %}
 
@@ -75,7 +74,7 @@
                                 <td>{{ device.Date }}</td>
                                 <td>{{ device.Location }}</td>
                                 <td>{{ device.Version }}</td>
-                                <td><span class="badge badge-success">فعال</span></td>
+                                <td><span class="badge badge-success">Active</span></td>
                                 <td>
                                     <a href="device-info/{{ device.id }}" class="btn btn-app bg-primary">
                                         <i class="fa fa-info"></i>
@@ -89,7 +88,7 @@
                             </tr>
                             {% endif %} {% endfor %} {% else %}
                             <tr>
-                                <td colspan="8">شما هیچ دستگاه فعالی ندارید!</td>
+                                <td colspan="8">You have no active devices!</td>
                             </tr>
                             {% endif %}
 
@@ -103,7 +102,7 @@
                     <!-- <input type="button" name="add-device" class="btn btn-block btn-success float-right" data-toggle="modal" data-target="#myModal" value="افزودن دستگاه"> -->
 
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-block btn-success float-right" data-toggle="modal" data-target="#exampleModalCenter">افزودن دستگاه</button>
+                    <button type="button" class="btn btn-block btn-success float-right" data-toggle="modal" data-target="#exampleModalCenter">Add device</button>
 
                     <!-- Modal -->
                     <div class="modal fade just-margin-top" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -111,7 +110,7 @@
                             <div class="modal-content">
                                 <div class="modal-header float-right">
                                     <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
-                                    <h4 class="modal-title">مشخصات دستگاه خود را وارد کنید</h4>
+                                    <h4 class="modal-title">Enter your device details</h4>
                                 </div>
                                 <div class="modal-body">
                                     <form method="POST">
@@ -190,9 +189,9 @@
                                 </div>
                                 <div class="modal-footer">
 
-                                    <button type="button" class="btn btn-danger" data-dismiss="modal">بستن</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">close</button>
                                     <div class="just-space"></div>
-                                    <button onclick="document.getElementById('id01').style.display='block'" type="submit" class="btn btn-success">افزودن</button>
+                                    <button onclick="document.getElementById('id01').style.display='block'" type="submit" class="btn btn-success">Add</button>
                                 </div>
                                 </form>
                             </div>

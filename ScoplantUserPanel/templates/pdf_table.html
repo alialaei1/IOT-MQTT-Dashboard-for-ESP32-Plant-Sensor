@@ -156,10 +156,10 @@
     <div id="content_frame">
         <div class="headers" id="header_content">
             <div>
-                <label> برای دستگاه: {{requested_for}} </label>
+                <label> For device: {{requested_for}} </label>
                 <a href="https://scoplant.com"><img src="https://raw.githubusercontent.com/PiE-team/FreshShop/master/assets/images/logos.png" style="width: 120px;
                             height: auto;" alt="logo"></a>
-                <label for="device-name">پارامتر مدنظر: {{selected_parameter}}</label>
+                <label for="device-name">The desired parameter: {{selected_parameter}}</label>
             </div>
         </div>
         <table class="darkTable">
@@ -185,17 +185,17 @@
                                         <tr style="background-color:bisque;">
                                             {% endif %} {% if export_parameter == "Total" %}
                                             <th style="background-color: #26d8bd;">EC</th>
-                                            <th style="background-color: #912525;">دمای خاک</th>
-                                            <th style="background-color: #1895ca;">رطوبت خاک</th>
-                                            <th style="background-color: #e90042;">دما</th>
-                                            <th style="background-color: #46d4ff;">رطوبت</th>
-                                            <th style="background-color: #f3cf31;">نور</th>
+                                            <th style="background-color: #912525;">soil temperature</th>
+                                            <th style="background-color: #1895ca;">soil moisture</th>
+                                            <th style="background-color: #e90042;">temperature</th>
+                                            <th style="background-color: #46d4ff;">humidity</th>
+                                            <th style="background-color: #f3cf31;">light</th>
 
                                             {% else %}
-                                            <th>داده</th>
+                                            <th>Data</th>
                                             {% endif %}
-                                            <th>زمان</th>
-                                            <th>تاریخ</th>
+                                            <th>Time</th>
+                                            <th>Date</th>
                                         </tr>
 
             </thead>
@@ -246,7 +246,7 @@
     </div>
     </div>
     <div id="footer_content" class="page_count">
-        <pdf:pagenumber>صفحه
+        <pdf:pagenumber>Page
     </div>
 </body>
 

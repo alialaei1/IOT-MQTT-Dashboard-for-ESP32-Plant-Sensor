@@ -11,7 +11,7 @@
             <!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-left">
-                    <li class="breadcrumb-item"><a href="/">خانه</a></li>
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
                     <li class="breadcrumb-item active">{{ title }}</li>
                 </ol>
             </div>
@@ -28,13 +28,13 @@
     {% if wrong_date_range %}
     <div class="alert alert-danger alert-dismissible active-error" style="width: 100%;height: 50px; margin: auto;">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-        <p>تاریخ شروع نمیتواند از تاریخ پایان بزرگتر باشد</p>
+        <p>The start date cannot be greater than the end date</p>
     </div>
     <br> {% endif %}
     <!-- general form elements -->
     <div class="card card-info">
         <div class="card-header">
-            <h3 class="card-title">انتخاب تاریخ</h3>
+            <h3 class="card-title">Select date</h3>
         </div>
         <!-- /.card-header -->
         <!-- form start -->
@@ -42,27 +42,27 @@
             {% csrf_token %}
             <div class="card-body">
                 <div class="form-group col-md-3" style="float: right; padding: 2px; ">
-                    <label>از تاریخ:</label> {{ export_methods.start_date }}
+                    <label>Start date:</label> {{ export_methods.start_date }}
                 </div>
                 <div class="form-group col-md-3" style="float: right; padding: 2px; ">
-                    <label>تا تاریخ:</label>{{ export_methods.end_date }}
+                    <label>End date:</label>{{ export_methods.end_date }}
                 </div>
 
                 <div id="morePDFexport">
                     <div class="form-group col-md-3" style="float: right; padding: 2px; ">
 
-                        <label>نوع خروجی:</label>{{ export_methods.Select_Export }}
+                        <label>Output type:</label>{{ export_methods.Select_Export }}
                     </div>
                     <div class="form-group col-md-3" style="float: right;padding: 2px; ">
                         <div class="just-space-2"></div>
-                        <label>انتخاب پارامتر:</label>{{ export_methods.Select_Parameter }}
+                        <label>Parameter selection:</label>{{ export_methods.Select_Parameter }}
                     </div>
                 </div>
             </div>
             <!-- /.card-body -->
 
             <div class="card-footer col-md-6" style="float:none;margin:auto;">
-                <input type="submit" value="خروجی" class="btn btn-block btn-success float-right">
+                <input type="submit" value="Output" class="btn btn-block btn-success float-right">
             </div>
         </form>
     </div>
