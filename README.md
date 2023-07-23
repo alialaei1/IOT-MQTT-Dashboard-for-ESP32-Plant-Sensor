@@ -43,11 +43,11 @@ To install this Django project, follow these steps:
 
 1- Clone the project repository to your local machine using the command:
 ```sh
-git clone https://github.com/alialaei110/Interactive-User-Guides-Template.git
+git clone https://github.com/alialaei110/IOT-MQTT-Dashboard-for-ESP32-Plant-Sensor.git
 ```
 2- Navigate to the project directory using the command:
 ```sh
-cd Interactive-User-Guides-Template
+cd IOT-MQTT-Dashboard-for-ESP32-Plant-Sensor
 ```
 3- Create a virtual environment and activate it using the following commands:
 ```sh
@@ -109,10 +109,10 @@ Open your web browser and navigate to ```http://127.0.0.1:8000/admin/```. Log in
 
 | Section       | Description |
 | ----------- | ----------- |
-| Users      | In this section, you can manage users (add or delete)       |
-| Topic   | In this section, you can create the main topics for which you want to raise questions or issues, for example: training a specific device or a specific topic of an application. Note that by choosing a unique link for your topic, you can share it through the link or QR code.        |
-| Questions   | In this section, you can create as many questions as you want for each type, for example: training on turning on the device or training on connecting the device to the Internet or training on registering on the website        |
-| Answers   | In this section you can create an answer for each question, on the answer page you can use video, photos, fonts and various colors like a weblog.        |
+|       |   |
+|    |   |
+|   |    |
+|     |      |
 
 ## License
 MIT
