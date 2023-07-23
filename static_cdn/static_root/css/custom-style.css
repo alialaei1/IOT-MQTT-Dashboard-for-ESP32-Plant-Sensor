@@ -1,0 +1,320 @@
+@font-face {
+    font-family: 'Iran-SansDN';
+    src: url('../fonts/IRANsanDN/IRANSansDN/IRANSansDN.eot');
+    src: url('../fonts/IRANsanDN/IRANSansDN/IRANSansDN.eot?#iefix') format('embedded-opentype'), url('../fonts/IRANsanDN/IRANSansDN/IRANSansDN.woff') format('woff'), url('../fonts/IRANsanDN/IRANSansDN/IRANSansDN.ttf') format('truetype'), url('../fonts/IRANsanDN/IRANSansDN/IRANSansDN.svg') format('svg');
+    font-weight: 500px;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Iran-SansDN-Bold';
+    src: url('../fonts/IRANsanDN/IRANSansDN-Bold/IRANSansDN-Bold.eot');
+    src: url('../fonts/IRANsanDN/IRANSansDN-Bold/IRANSansDN-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/IRANsanDN/IRANSansDN-Bold/IRANSansDN-Bold.woff') format('woff'), url('../fonts/IRANsanDN/IRANSansDN-Bold/IRANSansDN-Bold.ttf') format('truetype'), url('../fonts/IRANsanDN/IRANSansDN-Bold/IRANSansDN-Bold.svg') format('svg');
+    font-weight: bold;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'Iran-SansDN-Light';
+    src: url('../fonts/IRANsanDN/IRANSansDN_Light/IRANSansDN_Light.eot');
+    src: url('../fonts/IRANsanDN/IRANSansDN_Light/IRANSansDN_Light.eot?#iefix') format('embedded-opentype'), url('../fonts/IRANsanDN/IRANSansDN_Light/IRANSansDN_Light.woff') format('woff'), url('../fonts/IRANsanDN/IRANSansDN_Light/IRANSansDN_Light.ttf') format('truetype'), url('../fonts/IRANsanDN/IRANSansDN_Light/IRANSansDN_Light.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*---------------------------------- End of fonts ---------------------------------- */
+
+body {
+    font-family: 'Iran-SansDN';
+}
+
+.ltr {
+    direction: ltr;
+}
+
+ul {
+    padding-inline-start: 0px;
+}
+
+table th {
+    font-size: 15px;
+}
+
+
+/* my external styles */
+
+div.inner {
+    color: white;
+}
+
+.just-margin-top {
+    margin-top: 60px;
+}
+
+div.icon-white i {
+    color: #ecf4f7;
+}
+
+.battery-color {
+    background-color: #16c46d!important
+}
+
+.light-color {
+    background-color: #f3cf31!important
+}
+
+.rhe-color {
+    background-color: #1895ca!important
+}
+
+.ground-temp-color {
+    background-color: #912525!important
+}
+
+.rh-color {
+    background-color: #46d4ff!important
+}
+
+.ec-color {
+    background-color: #26d8bd!important
+}
+
+.tempurture-color {
+    background-color: #e90042!important
+}
+
+.just-space {
+    margin-left: 20px;
+}
+
+.just-space-2 {
+    margin-left: 2px;
+}
+
+.dropdown-item {
+    text-align: right;
+}
+
+.dropdown-footer,
+.dropdown-header {
+    text-align: center;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    padding-left: .5rem;
+}
+
+
+/*------------------------------------ contacts-list ------------------------------------*/
+
+.contacts-list-img {
+    float: right;
+}
+
+.contacts-list-info {
+    margin-right: 45px;
+    margin-left: 0;
+}
+
+
+/* sidebar */
+
+.sidebar {
+    direction: ltr;
+}
+
+.sidebar>div:first-child {
+    direction: rtl;
+}
+
+.control-sidebar,
+.control-sidebar:before {
+    left: -250px;
+    right: auto;
+    transition: left .3s ease-in-out;
+}
+
+.control-sidebar-slide-open .control-sidebar,
+.control-sidebar-slide-open .control-sidebar:before {
+    left: 0;
+    right: auto;
+}
+
+.small-box .icon {
+    right: auto;
+    left: 10px;
+}
+
+.nav-sidebar .nav-link>p>.right {
+    left: 1rem;
+    right: auto;
+}
+
+.nav-sidebar>.nav-item .nav-icon {
+    margin-right: 0;
+    margin-left: .2rem;
+}
+
+@media (min-width: 992px) {
+    .sidebar-mini.sidebar-collapse .content-wrapper,
+    .sidebar-mini.sidebar-collapse .main-footer,
+    .sidebar-mini.sidebar-collapse .main-header {
+        margin-right: 4.6rem;
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .sidebar-mini.sidebar-collapse .content-wrapper,
+    .sidebar-mini.sidebar-collapse .main-footer,
+    .sidebar-mini.sidebar-collapse .main-header {
+        margin-left: 0rem !important;
+        margin-right: 4.6rem !important;
+        z-index: 100;
+    }
+    .sidebar-mini.sidebar-collapse .main-sidebar,
+    .sidebar-mini.sidebar-collapse .main-sidebar:before {
+        margin-right: 0;
+        width: 4.6rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .content-wrapper,
+    .main-footer,
+    .main-header {
+        transition: margin-right .3s ease-in-out;
+        margin-right: 250px;
+        margin-left: 0;
+        z-index: 3000;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .main-sidebar,
+    .main-sidebar:before {
+        box-shadow: none!important;
+        margin-right: -250px;
+        margin-left: 0;
+    }
+    .content-wrapper,
+    .content-wrapper:before,
+    .main-footer,
+    .main-footer:before,
+    .main-header,
+    .main-header:before {
+        margin-right: 0;
+    }
+    .sidebar-open .main-sidebar,
+    .sidebar-open .main-sidebar:before {
+        margin-right: 0;
+        z-index: 4000;
+    }
+}
+
+.sidebar-collapse .main-sidebar,
+.sidebar-collapse .main-sidebar:before {
+    margin-right: -250px;
+}
+
+.main-sidebar {
+    left: auto;
+    right: 0;
+}
+
+
+/* Cards */
+
+.card-header>.card-tools {
+    right: auto;
+    left: 1rem;
+}
+
+.user-block img {
+    float: right;
+}
+
+.attachment-block .attachment-img {
+    float: right;
+}
+
+.attachment-block .attachment-pushed {
+    margin-left: 0px;
+    margin-right: 110px;
+}
+
+.card-comments .card-comment img,
+.img-lg,
+.img-md,
+.img-sm,
+.user-block.user-block-sm img {
+    float: right;
+}
+
+.card-comments .comment-text {
+    margin-right: 40px;
+    margin-left: 0;
+}
+
+.card-comments .card-comment img+.img-push,
+.img-sm+.img-push,
+.user-block.user-block-sm img+.img-push {
+    margin-left: 0px;
+    margin-right: 40px;
+}
+
+.user-block .comment,
+.user-block .description,
+.user-block .username {
+    margin-right: 50px;
+    margin-left: 0px;
+}
+
+.btn-group-vertical {
+    align-items: center;
+}
+
+
+/*------------------------- Form ----------------------------*/
+
+.select2-container .select2-search--inline {
+    float: right;
+}
+
+.select2-container--default .select2-search--inline .select2-search__field {
+    text-align: right;
+}
+
+
+/*----------------------- Extra Page ---------------------------*/
+
+.error-page>.headline {
+    float: right;
+}
+
+.error-page>.error-content {
+    margin-right: 190px;
+    margin-left: 0;
+}
+
+.lockscreen-image {
+    left: auto;
+    right: -10px;
+}
+
+.lockscreen-credentials {
+    margin-left: 0px;
+    margin-right: 70px;
+}
+
+.nav {
+    padding-inline-start: 0px !important;
+}
+
+
+/*---------------------------------- Persian Date Picker ---------------------------------- */
+
+.datepicker-plot-area {
+    font-family: 'Iran-SansDN';
+}

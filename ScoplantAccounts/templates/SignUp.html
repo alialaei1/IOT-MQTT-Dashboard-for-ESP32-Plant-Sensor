@@ -1,0 +1,115 @@
+{% extends 'shared/_MainLays.html' %} {% load static %}{% block head-content %}
+<title>{{ title }}</title>
+{% endblock %} {% block content %}
+<div class="wrap-login100">
+
+    <div class="logo js-tilt" data-tilt>
+        <img src="{% static 'images/logo.png' %} " alt="logo" width="249" height="63">
+    </div>
+
+    <div class="login-form">
+        <div class="login100-pic">
+            <img src="{% static 'images/signup-animation.gif' %}" alt="SignUp-image" />
+        </div>
+
+        <form class="login100-form" method="POST">
+            {% csrf_token %}
+            <span class="login100-form-title"> ثبت نام کنید </span>
+
+            <!-- Username -->
+            <div class="wrap-input100 validate-input" data-validate="نام کاربری را وارد کنید">
+                {{ signup_form.username }} {% for error in signup_form.username.errors %}
+                <p style="direction: rtl;color: red;">{{ error }}</p>
+                {% endfor %}
+                <span class="focus-input100"></span>
+                <span class="symbol-input100"><i class="fa fa-user" aria-hidden="true"></i></span>
+            </div>
+
+
+            <!-- Email -->
+            <div class="wrap-input100 validate-input" data-validate="ایمیل معتبر: test@abc.com">
+                {{ signup_form.email }} {% for error in signup_form.email.errors %}
+                <p style="direction: rtl;color: red;">{{ error }}</p>
+                {% endfor %}
+                <span class="focus-input100"></span>
+                <span class="symbol-input100">
+                              <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </span>
+            </div>
+
+
+            <!-- Password -->
+            <div class="wrap-input100 validate-input" data-validate="گذرواژه را وارد کنید">
+                {{ signup_form.password }} {% for error in signup_form.password.errors %}
+                <p style="direction: rtl;color: red;">{{ error }}</p>
+                {% endfor %}
+                <span class="focus-input100"></span>
+                <span class="symbol-input100">
+                              <i class="fa fa-lock" aria-hidden="true"></i>
+                            </span>
+            </div>
+
+
+            <!-- Re-Password -->
+            <div class="wrap-input100 validate-input" data-validate="گذرواژه را وارد کنید">
+                {{ signup_form.re_password }}
+                <span class="focus-input100"></span>
+                <span class="symbol-input100">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                          </span>
+            </div>
+
+            {% for error in signup_form.re_password.errors %}
+            <div class="wrap-input100 inputerror"></div>
+            <p style="direction: rtl;color: red;">{{ error }}</p>
+    </div>
+    {% endfor %}
+
+    <!-- Register Button start -->
+    <div class="container-login100-form-btn">
+        <button class="login100-form-btn" type="submit" name="reg_user">ثبت نام</button>
+    </div>
+    <!-- Register Button end -->
+
+    <!-- login link -->
+    <div class="text-center p-t-12">
+        <span class="txt1">قبلا ثبت نام کردم! </span>
+        <a class="txt2" href="login">وارد شوید</a>
+    </div>
+
+    <!-- social media buttons -->
+    <div class="text-center p-t-85">
+        <p class="txt2">ثبت نام با</p> <br>
+        <a href="">
+            <i class="fa fa-google fa-2x icon-social" aria-hidden="true"></i>
+        </a>
+
+
+        <a href="">
+            <i class="fa fa-twitter fa-2x icon-social" aria-hidden="true"></i>
+        </a>
+
+
+        <a href="">
+            <i class="fa fa-facebook fa-2x icon-social" aria-hidden="true"></i>
+        </a>
+    </div>
+    </form>
+</div>
+
+</div>
+<script>
+    document.getElementById("signupUsernameInput").onclick = function() {
+        $('#signupUsernameInput').bind('input', function() {
+            var c = this.selectionStart,
+                r = /[^a-z0-9 . _]/gi,
+                v = $(this).val();
+            if (r.test(v)) {
+                $(this).val(v.replace(r, ''));
+                c--;
+            }
+            this.setSelectionRange(c, c);
+        });
+    }
+</script>
+{% endblock content %}

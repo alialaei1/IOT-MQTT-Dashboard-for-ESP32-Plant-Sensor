@@ -1,0 +1,265 @@
+{% extends 'shared/_MainLayout.html' %} {% load static %} {% block head-content %}
+<title>{{ title }}</title>
+{% endblock %}{% block breadcrums %}
+
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">{{ title }}</h1>
+            </div>
+            <!-- /.col -->
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-left">
+                    <li class="breadcrumb-item"><a href="/">خانه</a></li>
+                    <li class="breadcrumb-item active">{{ title }}</li>
+                </ol>
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+
+{% endblock %}
+{% block content %}
+<section class="content">
+    <div class="container-fluid">
+        <!-- Device Info start -->
+        <div class="card-primary card-outline">
+            <div class="text-right">
+                <br>
+                <label for="device-name">نام دستگاه: <span class="form-control-lg col-2 text-primary">{{ deviceqs.Name }}</span></label>
+
+
+                <label for="device-name">محل دستگاه: <span class="form-control-lg col-2 text-primary">{{ deviceqs.Location}}</span></label>
+
+
+                <label for="device-name">تاریخ ثبت: <span class="form-control-lg col-2 text-primary">{{ date_fa }}</span></label>
+
+
+                <label for="device-name">ورژن دستگاه: <span class="form-control-lg col-2 text-primary">{{ deviceqs.Version}}</span></label>
+
+                <br>
+            </div>
+        </div>
+        <hr>
+        <!-- Device Info end -->
+    </div>
+    <!-- Sampling Rate and Log Rate input start -->
+    
+    <div class="col-md-12">
+        <div class="card card-info">
+            <div class="card-header">
+                <h3 class="card-title">نمونه گیری هر {{ deviceqs.Sampling_Rate }} دقیقه</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="sample">نمونه: </label>
+                        <div class="input-group mb-3">
+                            <!-- /btn-group -->
+                            {{ log_sample.Sampling_Rate }}
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-outline-success">ذخیره</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        {% for error in log_sample.Sampling_Rate.errors %}
+                        <br>
+                        <p style="direction: rtl;color: red;">{{ error }}</p>
+                        {% endfor %}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Sampling Rate and Log Rate input end -->
+    <!-- small boxes -->
+    <div class="row icon-white">
+        <!-- 1. Battery box -->
+        <div class="col-lg-6 col-6 ">
+            <!-- small box -->
+            <div class="small-box battery-color">
+                <div class="inner">
+                    <h3>{{last_data.Battery_Log}}<sup style="font-size: 20px">%</sup></h3>
+                    <p>باطری</p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-battery-full" aria-hidden="true"></i>
+                </div>
+
+            </div>
+        </div>
+        <!-- ./col -->
+        <!-- 2. Lux box -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box light-color">
+                <div class="inner">
+                    <h3>{{last_data.Lux_Log}}<sup style="font-size: 20px">lux</sup></h3>
+                    <p>نور</p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-sun-o " aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+        <!-- ./col -->
+        <!-- 3. Humidity box -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box rh-color">
+                <div class="inner">
+                    <h3>{{last_data.Humidity_Log}}<sup style="font-size: 20px">RH</sup></h3>
+                    <p>رطوبت</p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-tint" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+        <!-- ./col -->
+        <!-- 4. temperature box -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box tempurture-color">
+                <div class="inner">
+                    <h3>{{last_data.Temperature_Log}}<sup style="font-size: 20px">°C</sup></h3>
+                    <p>دما</p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-thermometer-half"></i>
+                </div>
+            </div>
+        </div>
+        <!-- ./col -->
+        <!-- 5. Soil moisture box -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box rhe-color">
+                <div class="inner">
+                    <h3>{{last_data.SoilMoisture_Log}}<sup style="font-size: 20px">RH</sup></h3>
+                    <p>رطوبت خاک</p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-spinner"></i>
+                </div>
+            </div>
+        </div>
+        <!-- ./col -->
+        <!-- 6. Soil tempurature box -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box ground-temp-color">
+                <div class="inner">
+                    <h3>{{last_data.SoilTemperature_Log}}<sup style="font-size: 20px">°C</sup></h3>
+                    <p>دمای خاک</p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-globe "></i>
+                </div>
+            </div>
+        </div>
+        <!-- ./col -->
+        <!-- 7. EC box -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box ec-color">
+                <div class="inner">
+                    <h3>{{last_data.EC_Log}}<sup style="font-size: 20px">S/m</sup></h3>
+                    <p>EC</p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-pie-chart"></i>
+                </div>
+                
+            </div>
+        </div>
+        <!-- ./col -->
+    </div>
+
+<div class="col-12">
+            <!-- Custom Tabs -->
+            <div class="card">
+              <div class="card-header d-flex p-0">
+                <ul id="tabs_chart" class="nav nav-pills ml-auto p-2">
+                  <li class="nav-item"><a id="Lux_tab" onclick="ChangeTabColor(this)" class="nav-link light-color" href="#tab_1" data-toggle="tab">شدت ‌نور</a></li>
+                  <li class="nav-item"><a id="Humidity_tab" onclick="ChangeTabColor(this)" class="nav-link" href="#tab_2" data-toggle="tab">رطوبت</a></li>
+                  <li class="nav-item"><a id="Temperature_tab" onclick="ChangeTabColor(this)" class="nav-link" href="#tab_3" data-toggle="tab">دما</a></li>
+                  <li class="nav-item"><a id="SoilMoisture_tab" onclick="ChangeTabColor(this)" class="nav-link" href="#tab_4" data-toggle="tab">رطوبت‌خاک</a></li>
+                  <li class="nav-item"><a id="SoilTemperature_tab" onclick="ChangeTabColor(this)" class="nav-link" href="#tab_5" data-toggle="tab">دمای‌خاک</a></li>
+                  <li class="nav-item"><a id="EC_tab" onclick="ChangeTabColor(this)" class="nav-link" href="#tab_6" data-toggle="tab">EC</a></li>
+                  <li class="nav-item"><a id="Total_tab" onclick="ChangeTabColor(this)" class="nav-link" href="#tab_7" data-toggle="tab">نمودار جامع</a></li>
+                </ul>
+              </div><!-- /.card-header -->
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane active" id="tab_1">
+                    <canvas id="Lux_Log"></canvas>
+                  </div>
+               
+                  <div class="tab-pane" id="tab_2">
+                    <canvas id="Humidity_Log"></canvas>
+                  </div>
+              
+                  <div class="tab-pane" id="tab_3">
+                    <canvas id="Temperature_Log"></canvas>
+                  </div>
+                  <div class="tab-pane" id="tab_4">
+                    <canvas id="SoilMoisture_Log"></canvas>
+                  </div>
+                  <div class="tab-pane" id="tab_5">
+                    <canvas id="SoilTemperature_Log"></canvas>
+                  </div>
+                  <div class="tab-pane" id="tab_6">
+                    <canvas id="EC_Log"></canvas>
+                  </div>
+                  <div class="tab-pane" id="tab_7">
+                    <canvas id="total"></canvas>
+                  </div>
+                
+                </div>
+                <!-- /.tab-content -->
+              </div><!-- /.card-body -->
+            </div>
+            <!-- ./card -->
+          </div>
+
+    <div class="card-footer" style="float: none; margin: auto; text-align: center;">
+        <a href="/reports/{{device_id}}"><button type="submit" class="btn btn-success"><i class="fa fa-save"></i> گزارش‌گیری</button></a>
+    </div>
+
+</section>
+
+{% endblock %}
+{% block scripts %}
+<script src="{% static 'js\chart-area-demo.js' %}"></script>
+<script>
+
+    window.onload = function() {
+        var ctx1 = document.getElementById('Lux_Log').getContext('2d');
+        var ctx2 = document.getElementById('Humidity_Log').getContext('2d');
+        var ctx3 = document.getElementById('Temperature_Log').getContext('2d');
+        var ctx4 = document.getElementById('SoilMoisture_Log').getContext('2d');
+        var ctx5 = document.getElementById('SoilTemperature_Log').getContext('2d');
+        var ctx6 = document.getElementById('EC_Log').getContext('2d');
+        var ctx7 = document.getElementById('total').getContext('2d');
+        Lux_Log_fun({{ labels|safe }}, {{ Lux_Log|safe }},ctx1);
+        Humidity_Log_fun({{ labels|safe }}, {{ Humidity_Log|safe }},ctx2);
+        Temperature_Log_fun({{ labels|safe }}, {{ Temperature_Log|safe }},ctx3);
+        SoilMoisture_Log_fun({{ labels|safe }}, {{ SoilMoisture_Log|safe }},ctx4);
+        SoilTemperature_Log_fun({{ labels|safe }}, {{ SoilTemperature_Log|safe }},ctx5);
+        EC_Log_fun({{ labels|safe }}, {{ EC_Log|safe }},ctx6);
+        total_fun({{ labels|safe }}, {{ Lux_Log|safe }},{{ Humidity_Log|safe }},{{ Temperature_Log|safe }},{{ SoilMoisture_Log|safe }},{{ SoilTemperature_Log|safe }},{{ EC_Log|safe }},ctx7);
+    };
+
+</script>
+
+{% endblock scripts %}

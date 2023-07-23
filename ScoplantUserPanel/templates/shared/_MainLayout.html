@@ -1,0 +1,253 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content=""> {% block head-content %} {% endblock %} {% include 'shared/_HeaderReferences.html' %} {% block header_ref %}{% endblock %}
+</head>
+
+<body class="hold-transition sidebar-mini">
+
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand bg-white navbar-light border-bottom">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="#" class="nav-link">تماس با ما</a>
+                </li>
+            </ul>
+
+            <!-- SEARCH FORM 
+            <form class="form-inline ml-3">
+                <div class="input-group input-group-sm">
+                    <input class="form-control form-control-navbar" type="search" placeholder="جستجو" aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-navbar" type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </form> --!>
+
+            <!-- left logo -->
+            <ul class="navbar-nav mr-auto">
+                <a href="https://scoplant.com" class="brand-link">
+                    <img src="{% static 'images\logo.png' %}" alt="Logo" class="brand-image" style="opacity: .8">
+                </a>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="/" class="brand-link">
+                <span class="brand-text font-weight-light">پنل کاربری</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar" style="direction: ltr">
+                <div style="direction: rtl">
+                    <!-- Sidebar user panel (optional) -->
+                    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                        <div class="image">
+                            <img src="{{ avatar_gen_url }}" class="img-circle elevation-2" alt="User Image" style="width: 2.5rem; height: 2.5rem;">
+                        </div>
+                        <div class="info">
+                            <a href="#" class="d-block">{{ user.username }}</a>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar Menu -->
+                    <nav class="mt-2">
+                        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                            <li class="nav-item has-treeview menu-open">
+                                <a href="#" class="nav-link active">
+                                    <i class="nav-icon fa fa-cog"></i>
+                                    <p>
+                                        دستگاه ها
+                                        <i class="right fa fa-angle-left"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="/" class="nav-link">
+                                            <i class="fa fa-plus nav-icon"></i>
+                                            <p>ثبت دستگاه</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link" data-toggle="modal" data-target="#selectdeviceInfo">
+                                            <i class="fa fa-info nav-icon"></i>
+                                            <p>سنجش لحظه‌ای داده</p>
+                                        </a>
+                                    </li>
+
+                                    <!-- <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            <i class="fa fa-info nav-icon"></i>
+                                            <p>اطلاعات دستگاه</p>
+                                        </a>
+                                    </li>  -->
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- /.sidebar-menu -->
+                    <nav class="mt-2 ">
+                        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link active" data-toggle="modal" data-target="#selectdeviceExport">
+                                    <i class="fa fa-info nav-icon"></i>
+                                    <p>گزارش‌گیری</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    {% if user.is_superuser %}
+                    <nav class="mt-2 ">
+                        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                            <li class="nav-item has-treeview menu-open">
+                                <li class="nav-item">
+                                    <a href="/admin" class="nav-link golden">
+                                        <i class="fa fa-dashboard nav-icon"></i>
+                                        <p>ادمین پنل</p>
+                                    </a>
+                                </li>
+
+                        </ul>
+                    </nav>
+                    {% endif %}
+                    <nav class="mt-2 ">
+                        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                            <li class="nav-item has-treeview menu-open">
+                                <a href="/logout" class="nav-link exit ">
+                                    <i class="nav-icon fa fa-sign-out"></i>
+                                    <p>
+                                        خروج
+                                    </p>
+                                </a>
+
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- Modal Info -->
+        <div class="modal fade just-margin-top" id="selectdeviceInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header float-right">
+                        <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                        <h4 class="modal-title">دستگاه مورد نظر خود را انتخاب کنید</h4>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <form method="POST">
+                                {% csrf_token %}
+                                <select id="select-devcie-info" name="select_device" class="form-control select2" style="width: 100%;">
+                                    {% if number_of_devices > 0 %}
+                                        {% for device in device_info %}
+                                            {% if device.User == user %}
+                                                <option value="{{ device.id }}" >{{ device.Name }}</option>
+                                            {% endif %}
+                                        {% endfor %}
+                                    
+                                    {% else %}
+                                        <option disabled="disabled">شما دستگاهی ندارید!</option>
+                                    {% endif %}
+                                </select>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">بستن</button>
+                                    <div class="just-space"></div>
+                                    <a type="button" onclick="GetSelectedValueInfo()" id="result-info" type="submit" href="#" class="btn btn-success">مشاهده</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Export -->
+        <div class="modal fade just-margin-top" id="selectdeviceExport" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header float-right">
+                        <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                        <h4 class="modal-title">انتخاب دستگاه برای گزارش گیری</h4>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <form method="POST">
+                                {% csrf_token %}
+                                <select id="select-devcie-export" name="select_device" class="form-control select2" style="width: 100%;">
+                                    {% if number_of_devices > 0 %}
+                                        {% for device in device_info %}
+                                            {% if device.User == user %}
+                                                <option value="{{ device.id }}" >{{ device.Name }}</option>
+                                            {% endif %}
+                                            
+                                            
+                                        {% endfor %}
+                                    
+                                    {% else %}
+                                        <option disabled="disabled">شما دستگاهی ندارید!</option>
+                                    {% endif %}
+                                </select>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">بستن</button>
+                                    <div class="just-space"></div>
+                                    <a type="button" onclick="GetSelectedValueExport()" id="result-export" type="submit" href="#" class="btn btn-success">مشاهده</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- head title of page -->
+            {% block breadcrums %}{% endblock %}
+            <!-- main content body -->
+            {% block content %}{% endblock %}
+
+        </div>
+    </div>
+
+
+
+
+    {% include 'shared/_FooterReferences.html' %} {% block footer_ref %}{% endblock %}
+
+    <script>
+        function GetSelectedValueInfo() {
+            var e = document.getElementById("select-devcie-info");
+            var result = e.options[e.selectedIndex].value;
+
+            document.getElementById("result-info").href = "/device-info/" + result;
+        }
+
+        function GetSelectedValueExport() {
+            var e = document.getElementById("select-devcie-export");
+            var result = e.options[e.selectedIndex].value;
+
+            document.getElementById("result-export").href = "/reports/" + result;
+        }
+    </script>
+    {% block scripts %}{% endblock scripts %}
+</body>
+
+</html>

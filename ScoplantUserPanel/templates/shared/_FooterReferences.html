@@ -1,0 +1,78 @@
+{% load static %}
+
+<!-- jQuery -->
+<script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+    $.widget.bridge('uibutton', $.ui.button)
+</script>
+
+
+<!-- Select2 -->
+<script src="{% static 'plugins/select2/select2.full.min.js' %}"></script>
+
+<!-- Bootstrap 4 -->
+<script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<!-- jQuery Knob Chart -->
+<script src="{% static 'plugins/knob/jquery.knob.js' %}"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="{% static 'plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js' %}"></script>
+<!-- Slimscroll -->
+<script src="{% static 'plugins/slimScroll/jquery.slimscroll.min.js' %}"></script>
+<!-- FastClick -->
+<script src="{% static 'plugins/fastclick/fastclick.js' %}"></script>
+<!-- AdminLTE App -->
+<script src="{% static 'js/adminlte.js' %}"></script>
+<!-- OPTIONAL SCRIPTS -->
+<script src="{% static 'js/demo.js' %}"></script>
+<!-- ChartJS 1.0.2 -->
+<script src="{% static 'plugins/chartjs-old/Chart.min.js' %}"></script>
+
+
+
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'vendor/jquery/jquery.easing.min.js' %}"></script>
+<script src="{% static 'js/ruang-admin.min.js' %}"></script>
+<!-- Page level plugins -->
+<script src="{% static 'plugins/chart.js/Chart.min.js' %}"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+<script>
+var customOptions = {
+			placeholder: "روز / ماه / سال"
+			, twodigit: false
+			, closeAfterSelect: false
+			, nextButtonIcon: "fa fa-arrow-circle-right"
+			, previousButtonIcon: "fa fa-arrow-circle-left"
+			, buttonsColor: "green"
+			, forceFarsiDigits: true
+			, markToday: true
+			, markHolidays: true
+			, highlightSelectedDay: true
+			, sync: true
+			, gotoToday: true
+		}
+		kamaDatepicker('date1', customOptions);
+		kamaDatepicker('date2', customOptions);
+</script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+    $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Morris.js charts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="{% static 'plugins/morris/morris.min.js' %}"></script>
+<!-- Page script -->
+<script>
+    $(function () {
+        //Initialize Select2 Elements
+        $('.select2').select2()
+
+</script>

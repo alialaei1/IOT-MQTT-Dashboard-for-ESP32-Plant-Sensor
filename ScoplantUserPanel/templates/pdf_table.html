@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 1cm;
+            /* @frame header_frame {
+                -pdf-frame-content: header_content;
+                width: 575pt;
+                left: 10pt;
+                right: 10pt;
+                margin-bottom: 5cm;
+                top: 5pt;
+            } */
+            @frame footer_frame {
+                /* Another static Frame */
+                -pdf-frame-content: footer_content;
+                left: 297.5pt;
+                bottom: 10pt;
+                height: 20pt;
+            }
+        }
+        /* Mohammad */
+        
+        @font-face {
+            font-family: IRANSansDN;
+            src: url('D:\My Projects\scoplant project\Scoplant\scoplant\assets\fonts\IRANsanDN\IRANSansDN\IRANSansDN.ttf');
+        }
+        /* Afshar */
+        
+        @font-face {
+            font-family: IRANSansDN;
+            src: url('E:/Projects/Sites/Scoplant/Scoplant/Scoplant/assets/fonts/IRANsanDN/IRANSansDN/IRANSansDN.ttf');
+        }
+        /* Alaie */
+        
+        @font-face {
+            font-family: IRANSansDN;
+            src: url('E:\Scoplant\Scoplant\assets\fonts\IRANsanDN\IRANSansDN\IRANSansDN.ttf');
+        }
+        
+        .page_count {
+            font-family: IRANSansDN;
+            font-size: 10px;
+            direction: rtl;
+            text-decoration: none;
+        }
+        
+        .headers {
+            font-family: IRANSansDN;
+            padding: 5px;
+        }
+        
+        .headers div {
+            margin-bottom: 5px;
+            width: 100%;
+            height: 50px;
+            font-size: 13px;
+            text-align: center;
+            border: 1px solid #AAAAAA;
+            border-radius: 13px;
+            padding: 5px;
+            align-items: center;
+        }
+        
+        footer {
+            background-color: beige;
+            text-align: center;
+            font-family: IRANSansDN;
+            font-size: 10px;
+            padding: 5px;
+        }
+        
+        footer div {
+            margin-top: 10px;
+            margin: auto;
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            border: 1px solid #AAAAAA;
+            border-radius: 10px;
+        }
+        
+        table.darkTable {
+            font-family: IRANSansDN;
+            border: 1px solid #1C6EA4;
+            background-color: #EEEEEE;
+            width: 85%;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        
+        table.darkTable td,
+        table.darkTable th {
+            border: 1px solid #AAAAAA;
+        }
+        
+        table.darkTable tbody td {
+            font-size: 11px;
+            color: #333333;
+            padding: 2px;
+        }
+        
+        table.darkTable tr:nth-child(even) {
+            background: #1C6EA4;
+        }
+        
+        table.darkTable thead {
+            background: #1C6EA4;
+            border-bottom: 2px solid #444444;
+        }
+        
+        table.darkTable thead th {
+            background: #1C6EA4;
+            font-size: 12px;
+            font-weight: bold;
+            color: black;
+            text-align: center;
+            padding: 3px 2px;
+            border-left: 2px solid #D0E4F5;
+        }
+        
+        table.darkTable thead th:first-child {
+            border-left: none;
+        }
+        
+        table.darkTable tfoot {
+            font-size: 11px;
+            font-weight: bold;
+            color: black;
+            background: #D0E4F5;
+            border-top: 2px solid #444444;
+            text-decoration: none;
+            padding: 2px;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        table.darkTable tfoot td {
+            font-size: 11px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <pdf:language name="persian" />
+
+
+    <div id="content_frame">
+        <div class="headers" id="header_content">
+            <div>
+                <label> برای دستگاه: {{requested_for}} </label>
+                <a href="https://scoplant.com"><img src="https://raw.githubusercontent.com/PiE-team/FreshShop/master/assets/images/logos.png" style="width: 120px;
+                            height: auto;" alt="logo"></a>
+                <label for="device-name">پارامتر مدنظر: {{selected_parameter}}</label>
+            </div>
+        </div>
+        <table class="darkTable">
+            <thead>
+                {% if export_parameter == "Lux" %}
+                <tr style="background-color: #f3cf31;">
+
+                    {% elif export_parameter == "Humidity" %}
+                    <tr style="background-color: #46d4ff;">
+
+                        {% elif export_parameter == "Temperature" %}
+                        <tr style="background-color: #e90042;">
+
+                            {% elif export_parameter == "Soil_Moisture" %}
+                            <tr style="background-color: #1895ca;">
+
+                                {% elif export_parameter == "Soil_tempurature" %}
+                                <tr style="background-color: #912525;">
+
+                                    {% elif export_parameter == "EC" %}
+                                    <tr style="background-color: #26d8bd;">
+                                        {% elif export_parameter == "Total" %}
+                                        <tr style="background-color:bisque;">
+                                            {% endif %} {% if export_parameter == "Total" %}
+                                            <th style="background-color: #26d8bd;">EC</th>
+                                            <th style="background-color: #912525;">دمای خاک</th>
+                                            <th style="background-color: #1895ca;">رطوبت خاک</th>
+                                            <th style="background-color: #e90042;">دما</th>
+                                            <th style="background-color: #46d4ff;">رطوبت</th>
+                                            <th style="background-color: #f3cf31;">نور</th>
+
+                                            {% else %}
+                                            <th>داده</th>
+                                            {% endif %}
+                                            <th>زمان</th>
+                                            <th>تاریخ</th>
+                                        </tr>
+
+            </thead>
+
+            <tbody>
+                {% for item in qs_res %}
+                <tr>
+                    {% if export_parameter == "Lux" %}
+                    <td>{{ item.Lux_Log }} Lux</td>
+
+                    {% elif export_parameter == "Humidity" %}
+                    <td>{{ item.Humidity_Log }} %</td>
+
+                    {% elif export_parameter == "Temperature" %}
+                    <td>{{ item.Temperature_Log }} °C</td>
+
+                    {% elif export_parameter == "Soil_Moisture" %}
+                    <td>{{ item.SoilMoisture_Log }} %</td>
+
+                    {% elif export_parameter == "Soil_tempurature" %}
+                    <td>{{ item.SoilTemperature_Log }} °C</td>
+
+                    {% elif export_parameter == "EC" %}
+                    <td>{{ item.EC_Log }} S/m</td>
+
+                    {% elif export_parameter == "Total" %}
+                    <td>{{ item.EC_Log }} S/m</td>
+                    <td>{{ item.SoilTemperature_Log }} °C</td>
+                    <td>{{ item.SoilMoisture_Log }} %</td>
+                    <td>{{ item.Temperature_Log }} °C</td>
+                    <td>{{ item.Humidity_Log }} %</td>
+                    <td>{{ item.Lux_Log }} Lux</td>
+
+                    {% endif %}
+                    <td>{{ item.Time_Log }}</td>
+                    <td>{{ item.Date_Log }}</td>
+
+                </tr>
+                {% endfor %}
+            </tbody>
+            </tr>
+        </table>
+        <footer>
+            <div>
+                <span>CopyRight &copy; <a href="http://scoplant.com">Scoplant</span>
+            </div>
+        </footer>
+    </div>
+    </div>
+    <div id="footer_content" class="page_count">
+        <pdf:pagenumber>صفحه
+    </div>
+</body>
+
+</html>
