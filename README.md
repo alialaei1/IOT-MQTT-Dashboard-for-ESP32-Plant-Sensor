@@ -22,7 +22,7 @@ The project is based on open-source principles, and all resources and designs ar
 
 
 ### Resource
-TTGO-T-HIGrow [link]( https://github.com/pesor/TTGO-T-HIGrow)
+[TTGO-T-HIGrow]( https://github.com/pesor/TTGO-T-HIGrow)
 
 
 
