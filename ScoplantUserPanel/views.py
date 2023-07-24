@@ -184,7 +184,7 @@ def device_info(request, device_id):
         'device_info': device_info,
         'log_sample': add_new_device,
         'number_of_devices': number_of_devices,
-        'title': "سنجش اطلاعات",
+        'title': "Measuring Information",
         'user': user,
         'device_id': device_id,
         'deviceqs': deviceqs,
@@ -488,31 +488,31 @@ def reporting_device(request, device_id):
 
             # Checks if selectExport is PDFTableExport
             elif selectExport == "PDFTableExport":
-                selectExport = "pdf- جدولی"
+                selectExport = "pdf- tabular"
                 paramtererfor = ''
                 if selectParameter == "Lux":
-                    paramtererfor = 'شدت نور'
+                    paramtererfor = 'light intensity'
 
                 elif selectParameter == "Humidity":
-                    paramtererfor = 'رطوبت'
+                    paramtererfor = 'moisture'
 
                 elif selectParameter == "Temperature":
-                    paramtererfor = 'دما'
+                    paramtererfor = 'temperature'
 
                 elif selectParameter == "Soil_Moisture":
-                    paramtererfor = 'رطوبت خاک'
+                    paramtererfor = 'soil moisture'
 
                 elif selectParameter == "Soil_tempurature":
-                    paramtererfor = 'دمای خاک'
+                    paramtererfor = 'soil temperature'
 
                 elif selectParameter == "EC":
                     paramtererfor = 'EC'
 
                 elif selectParameter == "Total":
-                    paramtererfor = 'خروجی جامع'
+                    paramtererfor = 'output all data'
 
                 context = {
-                    'title': 'خروجی PDF',
+                    'title': 'output PDF',
                     'startDateJalali': request.POST.get("start_date"),
                     'endDateJalali': request.POST.get("end_date"),
                     'export_method': selectExport,
@@ -580,7 +580,7 @@ def reporting_device(request, device_id):
                 if selectParameter == "Lux":
                     fig = px.line(df, x='Date', y=f'{selectParameter}', range_x=[
                                   gregorianStartDate, gregorianEndtDate])
-                    fig.update_yaxes(title_text='شدت نور')
+                    fig.update_yaxes(title_text='light intensity')
                     fig.update_traces(line_color='#f3cf31')
                     # fig.update_layout(
                     #     font=dict(
@@ -592,25 +592,25 @@ def reporting_device(request, device_id):
                 elif selectParameter == "Humidity":
                     fig = px.line(df, x='Date', y=f'{selectParameter}', range_x=[
                                   gregorianStartDate, gregorianEndtDate])
-                    fig.update_yaxes(title_text='رطوبت')
+                    fig.update_yaxes(title_text='Humidity')
                     fig.update_traces(line_color='#46d4ff')
 
                 elif selectParameter == "Temperature":
                     fig = px.line(df, x='Date', y=f'{selectParameter}', range_x=[
                                   gregorianStartDate, gregorianEndtDate])
-                    fig.update_yaxes(title_text='دما')
+                    fig.update_yaxes(title_text='temperature')
                     fig.update_traces(line_color='#e90042')
 
                 elif selectParameter == "Soil_Moisture":
                     fig = px.line(df, x='Date', y=f'{selectParameter}', range_x=[
                                   gregorianStartDate, gregorianEndtDate])
-                    fig.update_yaxes(title_text='رطوبت خاک')
+                    fig.update_yaxes(title_text='soil moisture')
                     fig.update_traces(line_color='#1895ca')
 
                 elif selectParameter == "Soil_tempurature":
                     fig = px.line(df, x='Date', y=f'{selectParameter}', range_x=[
                                   gregorianStartDate, gregorianEndtDate])
-                    fig.update_yaxes(title_text='دمای خاک')
+                    fig.update_yaxes(title_text='soil temperature')
                     fig.update_traces(line_color='#912525')
 
                 elif selectParameter == "EC":
@@ -694,7 +694,7 @@ def reporting_device(request, device_id):
         'device_info': device_info,
         'number_of_devices': number_of_devices,
         'user': user,
-        'title': "گزارش‌گیری دستگاه",
+        'title': "Device Reporting",
         'export_methods': export_methods,
         'wrong_date_range': wrong_date_range,
         'avatar_gen_url': avatar_gen,

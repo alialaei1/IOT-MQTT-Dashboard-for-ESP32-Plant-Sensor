@@ -11,32 +11,33 @@ class AddNewDevice(forms.Form):
     # Auth With models : Username, Password, Number
     Username = forms.CharField(
         widget=forms.TextInput(
-            attrs={'placeholder': 'شناسه کاربری دستگاه', 'class': 'form-control', 'id':'device_name'}),
+            attrs={'placeholder': 'device ID', 'class': 'form-control', 'id':'device_name'}),
         validators=[
             validators.MaxLengthValidator(
-                limit_value=20, message='تعداد کاراکترهای نام کاربری نباید بیشتر از 20 کاراکتر باشد')
+                limit_value=20, message='The number of characters in the username should not be more than 20 characters')
         ]
     )
     Version = forms.CharField(
         widget=forms.TextInput(
-            attrs={'placeholder': 'ورژن دستگاه', 'class': 'form-control'}),
+
+            attrs={'placeholder': 'device version', 'class': 'form-control'}),
     )
     Name = forms.CharField(
         widget=forms.TextInput(
-            attrs={'placeholder': 'نام دلخواه دستگاه', 'class': 'form-control'}),
+            attrs={'placeholder': 'custom device name', 'class': 'form-control'}),
     )
     Location = forms.CharField(
         widget=forms.TextInput(
-            attrs={'placeholder': 'مکان قرارگیری دستگاه', 'class': 'form-control'}),
+            attrs={'placeholder': 'place', 'class': 'form-control'}),
     )
     Sampling_Rate = forms.IntegerField(
         widget=forms.NumberInput(
-            attrs={'placeholder': 'نمونه سازی به دقیقه', 'class': 'form-control', 'min': '5',  'max': '60', 'step': '5'}),
+            attrs={'placeholder': 'sampling', 'class': 'form-control', 'min': '5', 'max': '60', 'step': '5'}),
         validators=[
             validators.MaxValueValidator(
-                limit_value=60, message="حداکثر مقدار 60 است"),
+                limit_value=60, message="The maximum value is 60"),
             validators.MinValueValidator(
-                limit_value=5, message="حداقل مقدار 5 است"),
+                limit_value=5, message="Minimum value is 5"),
         ]
     )
 
@@ -45,17 +46,18 @@ class ExportingMethods(forms.Form):
 
     start_date = forms.CharField(
         widget=forms.TextInput(
-            attrs={'class': 'form-control', 'type': 'text', 'id': 'date1', 'autocomplete': 'off', 'name': 'start_date', 'placeholder': 'انتخاب'}),
+            attrs={'class': 'form-control', 'type': 'text', 'id': 'date1', 'autocomplete': 'off', 'name': 'start_date', 'placeholder': 'Select'}),
     )
     end_date = forms.CharField(
         widget=forms.TextInput(
-            attrs={'class': 'form-control ', 'type': 'text', 'id': 'date2', 'autocomplete': 'off', 'name': 'end_date', 'placeholder': 'انتخاب'}),
+            attrs={'class': 'form-control ', 'type': 'text', 'id': 'date2', 'autocomplete': 'off', 'name': 'end_date', 'placeholder': 'Select'}),
     )
 
     CHOICES_Export = (
-        ('ExcelTableExport', 'جدولی در قالب Excel'),
-        ('PDFTableExport', 'جدولی در قالب PDF'),
-        ('PDFChartExportParts', 'نموداری - در قالب PDF'),
+        
+        ('ExcelTableExport', 'Table in Excel format'),
+        ('PDFTableExport', 'Table in PDF format'),
+        ('PDFChartExportParts', 'Chart - in PDF format'),
     )
 
     Select_Export = forms.ChoiceField(
@@ -64,13 +66,13 @@ class ExportingMethods(forms.Form):
         ), choices=CHOICES_Export)
 
     Export_Parameter = (
-        ('Lux', 'نور'),
-        ('Humidity', 'رطوبت'),
-        ('Temperature', 'دما'),
-        ('Soil_Moisture', 'رطوبت خاک'),
-        ('Soil_tempurature', 'دمای خاک'),
+        ('Lux', 'light'),
+        ('Humidity', 'humidity'),
+        ('Temperature', 'temperature'),
+        ('Soil_Moisture', 'soil moisture'),
+        ('Soil_tempurature', 'soil temperature'),
         ('EC', 'EC'),
-        ('Total', 'خروجی جامع (نور، دما، رطوبت، EC و...)'),
+        ('Total', 'Total output (light, temperature, humidity, EC and...)'),
     )
 
     Select_Parameter = forms.ChoiceField(

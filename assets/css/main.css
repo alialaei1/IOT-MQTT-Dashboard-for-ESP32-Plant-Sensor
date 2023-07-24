@@ -38,7 +38,7 @@
 body,
 html {
     height: 100%;
-    font-family: 'Iran-SansDN';
+    /* font-family: 'Iran-SansDN'; */
 }
 
 
@@ -101,7 +101,7 @@ html {
 /*---------------------------------------------*/
 
 a {
-    font-family: 'Iran-SansDN';
+    /* font-family: 'Iran-SansDN'; */
     font-size: 14px;
     line-height: 1.7;
     color: #666666;
@@ -134,7 +134,7 @@ h6 {
 }
 
 p {
-    font-family: 'Iran-SansDN';
+    /* font-family: 'Iran-SansDN'; */
     font-size: 14px;
     line-height: 1.7;
     color: #666666;
@@ -252,14 +252,14 @@ iframe {
 [ Utility ]*/
 
 .txt1 {
-    font-family: 'Iran-SansDN';
+    /* font-family: 'Iran-SansDN'; */
     font-size: 13px;
     line-height: 1.5;
     color: #999999;
 }
 
 .txt2 {
-    font-family: 'Iran-SansDN';
+    /* font-family: 'Iran-SansDN'; */
     font-size: 13px;
     line-height: 1.5;
     color: #666666;
@@ -349,7 +349,7 @@ iframe {
 }
 
 .login100-form-title {
-    font-family: 'Iran-SansDN';
+    /* font-family: 'Iran-SansDN'; */
     font-size: 24px;
     color: #333333;
     line-height: 1.2;
@@ -370,7 +370,7 @@ iframe {
 }
 
 .input100 {
-    font-family: 'Iran-SansDN';
+    /* font-family: 'Iran-SansDN'; */
     font-size: 15px;
     line-height: 1.5;
     color: #666666;
@@ -463,7 +463,7 @@ iframe {
 }
 
 .login100-form-btn {
-    font-family: 'Iran-SansDN-Bold';
+    /* font-family: 'Iran-SansDN-Bold'; */
     font-size: 15px;
     line-height: 1.5;
     color: #fff;
@@ -552,7 +552,7 @@ iframe {
     transform: translateY(-50%);
     right: 8px;
     pointer-events: none;
-    font-family: 'Iran-SansDN';
+    /* font-family: 'Iran-SansDN'; */
     color: #c80000;
     font-size: 13px;
     line-height: 1.4;
