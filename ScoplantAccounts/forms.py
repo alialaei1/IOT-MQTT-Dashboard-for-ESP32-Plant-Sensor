@@ -7,27 +7,27 @@ class SignUpForm(forms.Form):
         widget=forms.TextInput(
             attrs={'placeholder': 'Username', 'class': 'input100','id':'signupUsernameInput'}),
         validators=[
-            validators.MaxLengthValidator(limit_value=20, message='تعداد کاراکترهای نام کاربری نباید بیشتر از 20 کاراکتر باشد')
+            validators.MaxLengthValidator(limit_value=20, message='The number of characters in the username should not be more than 20 characters')
         ]
     )
 
     email = forms.EmailField(
         widget=forms.EmailInput(
-            attrs={'placeholder': 'ایمیل', 'class': 'input100'}),
+            attrs={'placeholder': 'email', 'class': 'input100'}),
         validators=[
-            validators.EmailValidator('ایمیل وارد شده معتبر نمیباشد')
+            validators.EmailValidator('Email entered is not valid')
         ]
     )
 
     password = forms.CharField(
         widget=forms.PasswordInput(
-            attrs={'placeholder': 'گذرواژه', 'class': 'input100'}),
-        label='گذروازه'
+            attrs={'placeholder': 'password', 'class': 'input100'}),
+        label='password'
     )
 
     re_password = forms.CharField(
         widget=forms.PasswordInput(
-            attrs={'placeholder': 'تکرار گذرواژه', 'class': 'input100'}),
+            attrs={'placeholder': 'repeat password', 'class': 'input100'}),
     )
 
     def clean_email(self):
@@ -35,7 +35,7 @@ class SignUpForm(forms.Form):
         is_exist_email = User.objects.filter(email=email).exists()
 
         if is_exist_email:
-            raise forms.ValidationError('کاربری با این ایمیل وجود دارد')
+            raise forms.ValidationError('There is a user with this email')
         return email
 
     def clean_username(self):
@@ -44,7 +44,7 @@ class SignUpForm(forms.Form):
             username=username).exists()
 
         if is_exist_user_by_username:
-            raise forms.ValidationError('کاربری با این نام کاربری وجود دارد')
+            raise forms.ValidationError('A user with this username exists')
         return username
 
     def clean_re_password(self):
@@ -52,7 +52,7 @@ class SignUpForm(forms.Form):
         re_password = self.cleaned_data.get('re_password')
 
         if password != re_password:
-            raise forms.ValidationError('کلمه های عبور مغایرت دارند')
+            raise forms.ValidationError('passwords are inconsistent')
         return password
 
 class LoginForm(forms.Form):
