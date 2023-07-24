@@ -22,7 +22,7 @@
                     <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">تماس با ما</a>
+                    <!-- <a href="#" class="nav-link">Contact Us</a> -->
                 </li>
             </ul>
 
@@ -49,20 +49,29 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="/" class="brand-link">
-                <span class="brand-text font-weight-light">پنل کاربری</span>
+                <span class="brand-text font-weight-light">Scoplant Dashbard</span>
             </a>
 
             <!-- Sidebar -->
             <div class="sidebar" style="direction: ltr">
-                <div style="direction: rtl">
+                <div style="">
                     <!-- Sidebar user panel (optional) -->
                     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                         <div class="image">
                             <img src="{{ avatar_gen_url }}" class="img-circle elevation-2" alt="User Image" style="width: 2.5rem; height: 2.5rem;">
                         </div>
+
                         <div class="info">
                             <a href="#" class="d-block">{{ user.username }}</a>
                         </div>
+
+
+
+
+
+
+
+
                     </div>
 
                     <!-- Sidebar Menu -->
@@ -72,21 +81,25 @@
                                 <a href="#" class="nav-link active">
                                     <i class="nav-icon fa fa-cog"></i>
                                     <p>
-                                        دستگاه ها
                                         <i class="right fa fa-angle-left"></i>
+                                        Devices
+                                        
                                     </p>
+                                    
                                 </a>
                                 <ul class="nav nav-treeview">
                                     <li class="nav-item">
                                         <a href="/" class="nav-link">
                                             <i class="fa fa-plus nav-icon"></i>
-                                            <p>ثبت دستگاه</p>
+                                            <p>Device Registration</p>
+                                            
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="#" class="nav-link" data-toggle="modal" data-target="#selectdeviceInfo">
                                             <i class="fa fa-info nav-icon"></i>
-                                            <p>سنجش لحظه‌ای داده</p>
+                                            <p>Realtimer Data</p>
+                                            
                                         </a>
                                     </li>
 
@@ -106,7 +119,7 @@
                             <li class="nav-item">
                                 <a href="#" class="nav-link active" data-toggle="modal" data-target="#selectdeviceExport">
                                     <i class="fa fa-info nav-icon"></i>
-                                    <p>گزارش‌گیری</p>
+                                    <p>Reporting</p>
                                 </a>
                             </li>
                         </ul>
@@ -118,7 +131,7 @@
                                 <li class="nav-item">
                                     <a href="/admin" class="nav-link golden">
                                         <i class="fa fa-dashboard nav-icon"></i>
-                                        <p>ادمین پنل</p>
+                                        <p>Admin panel</p>
                                     </a>
                                 </li>
 
@@ -131,7 +144,7 @@
                                 <a href="/logout" class="nav-link exit ">
                                     <i class="nav-icon fa fa-sign-out"></i>
                                     <p>
-                                        خروج
+                                        Exit
                                     </p>
                                 </a>
 
@@ -148,7 +161,7 @@
                 <div class="modal-content">
                     <div class="modal-header float-right">
                         <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
-                        <h4 class="modal-title">دستگاه مورد نظر خود را انتخاب کنید</h4>
+                        <h4 class="modal-title">Choose your desired device</h4>
                     </div>
                     <div class="col-md-12">
                         <div class="form-group">
@@ -163,11 +176,11 @@
                                         {% endfor %}
                                     
                                     {% else %}
-                                        <option disabled="disabled">شما دستگاهی ندارید!</option>
+                                        <option disabled="disabled">You do not have a device!</option>
                                     {% endif %}
                                 </select>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger" data-dismiss="modal">بستن</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                                     <div class="just-space"></div>
                                     <a type="button" onclick="GetSelectedValueInfo()" id="result-info" type="submit" href="#" class="btn btn-success">مشاهده</a>
                                 </div>
@@ -184,7 +197,7 @@
                 <div class="modal-content">
                     <div class="modal-header float-right">
                         <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
-                        <h4 class="modal-title">انتخاب دستگاه برای گزارش گیری</h4>
+                        <h4 class="modal-title">Select device for reporting</h4>
                     </div>
                     <div class="col-md-12">
                         <div class="form-group">
@@ -201,11 +214,11 @@
                                         {% endfor %}
                                     
                                     {% else %}
-                                        <option disabled="disabled">شما دستگاهی ندارید!</option>
+                                        <option disabled="disabled">You do not have a device!</option>
                                     {% endif %}
                                 </select>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger" data-dismiss="modal">بستن</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                                     <div class="just-space"></div>
                                     <a type="button" onclick="GetSelectedValueExport()" id="result-export" type="submit" href="#" class="btn btn-success">مشاهده</a>
                                 </div>

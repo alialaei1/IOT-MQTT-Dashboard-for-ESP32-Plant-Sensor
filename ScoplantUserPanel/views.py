@@ -97,7 +97,7 @@ def add_device(request):
         'device_info': device_info,
         'user': user,
         'number_of_devices': number_of_devices,
-        'title': "ثبت دستگاه",
+        'title': "Device Registration",
         'invalid_username': invalid_username,
         'activated_before': activated_before,
         'wrong_information': wrong_information,
