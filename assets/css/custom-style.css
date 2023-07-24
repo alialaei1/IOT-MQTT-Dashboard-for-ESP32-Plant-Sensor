@@ -26,7 +26,7 @@
 /*---------------------------------- End of fonts ---------------------------------- */
 
 body {
-    /* font-family: 'Iran-SansDN'; */
+    font-family: 'Iran-SansDN';
 }
 
 .ltr {
@@ -119,13 +119,13 @@ div.icon-white i {
 
 
 /* sidebar */
-
+/* 
 .sidebar {
     direction: ltr;
 }
 
 .sidebar>div:first-child {
-    /* direction: rtl; */
+    direction: rtl;
 }
 
 .control-sidebar,
@@ -221,7 +221,7 @@ div.icon-white i {
 .main-sidebar {
     left: auto;
     right: 0;
-}
+} */
 
 
 /* Cards */
@@ -316,5 +316,5 @@ div.icon-white i {
 /*---------------------------------- Persian Date Picker ---------------------------------- */
 
 .datepicker-plot-area {
-    /* font-family: 'Iran-SansDN'; */
+    font-family: 'Iran-SansDN';
 }

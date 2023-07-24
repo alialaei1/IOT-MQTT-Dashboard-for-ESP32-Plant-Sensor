@@ -11,7 +11,7 @@
             </div>
             <!-- /.col -->
             <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-left">
+                <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="/">Home</a></li>
                     <li class="breadcrumb-item active">{{ title }}</li>
                 </ol>
@@ -61,12 +61,12 @@
                 <form method="post">
                     {% csrf_token %}
                     <div class="form-group">
-                        <label for="sample">نمونه: </label>
+                        <label for="sample">Sample: </label>
                         <div class="input-group mb-3">
                             <!-- /btn-group -->
                             {{ log_sample.Sampling_Rate }}
                             <div class="input-group-append">
-                                <button type="submit" class="btn btn-outline-success"></button>
+                                <button type="submit" class="btn btn-outline-success">Sample</button>
                             </div>
                         </div>
                     </div>
@@ -196,7 +196,7 @@
                   <li class="nav-item"><a id="SoilMoisture_tab" onclick="ChangeTabColor(this)" class="nav-link" href="#tab_4" data-toggle="tab">soil moisture</a></li>
                   <li class="nav-item"><a id="SoilTemperature_tab" onclick="ChangeTabColor(this)" class="nav-link" href="#tab_5" data-toggle="tab">soil temperature</a></li>
                   <li class="nav-item"><a id="EC_tab" onclick="ChangeTabColor(this)" class="nav-link" href="#tab_6" data-toggle="tab">EC</a></li>
-                  <li class="nav-item"><a id="Total_tab" onclick="ChangeTabColor(this)" class="nav-link" href="#tab_7" data-toggle="tab">Comprehensive diagram</a></li>
+                  <li class="nav-item"><a id="Total_tab" onclick="ChangeTabColor(this)" class="nav-link" href="#tab_7" data-toggle="tab">total diagram</a></li>
                 </ul>
               </div><!-- /.card-header -->
               <div class="card-body">
@@ -233,7 +233,7 @@
           </div>
 
     <div class="card-footer" style="float: none; margin: auto; text-align: center;">
-        <a href="/reports/{{device_id}}"><button type="submit" class="btn btn-success"><i class="fa fa-save"></i>Reporting</button></a>
+        <a href="/reports/{{device_id}}"><button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Reporting </button></a>
     </div>
 
 </section>
