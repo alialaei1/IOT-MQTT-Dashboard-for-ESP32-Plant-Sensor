@@ -26,10 +26,10 @@ def user_login(request):
             login(request, user)
             return redirect('/')
         else:
-            login_form.add_error('username', 'کاربری با این مشخصات یافت نشد!')
+            login_form.add_error('username', 'User with this profile was not found!')
     context = {
         'login_form': login_form,
-        'title': "ورود"
+        'title': "Login"
     }
     return render(request, 'Login.html', context)
 
@@ -49,7 +49,7 @@ def user_signup(request):
         return redirect('/login')
     context = {
         'signup_form': signup_form,
-        'title': "ثبت نام"
+        'title': "Register"
     }
     return render(request, 'SignUp.html', context)
 
@@ -86,14 +86,14 @@ def password_reset_request(request):
                         send_mail(subject, email, 'admin@example.com',[user.email], fail_silently=False)
                     except BadHeaderError:
                         return HttpResponse('Invalid header found.')
-                    return render(request, 'password_reset_done.html', {'title': "موفقیت آمیز"})
+                    return render(request, 'password_reset_done.html', {'title': "Successful"})
 
     
     context = {
         'forgot_password_form': passform,
         
         'valid_error': add_error,
-        'title': "فراموشی رمز"
+        'title': "Forgot Password"
     }
     return render(request, 'password_reset.html', context)
 

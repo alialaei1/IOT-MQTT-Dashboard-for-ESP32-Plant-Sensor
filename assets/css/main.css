@@ -153,7 +153,7 @@ li {
 input {
     outline: none;
     border: none;
-    direction: rtl;
+    /* direction: rtl; */
 }
 
 textarea {
@@ -325,7 +325,7 @@ iframe {
 }
 
 .direct {
-    direction: rtl;
+    /* direction: rtl; */
 }
 
 

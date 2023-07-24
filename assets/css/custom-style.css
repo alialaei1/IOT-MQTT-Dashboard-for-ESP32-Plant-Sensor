@@ -125,7 +125,7 @@ div.icon-white i {
 }
 
 .sidebar>div:first-child {
-    direction: rtl;
+    /* direction: rtl; */
 }
 
 .control-sidebar,

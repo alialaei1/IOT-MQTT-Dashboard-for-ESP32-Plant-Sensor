@@ -2238,7 +2238,7 @@
 /* ------------------------------------ */
 .text-center {
 	text-align: center;
-	direction: rtl;
+	/* direction: rtl; */
 }
 .text-left {text-align: left;}
 .text-right {text-align: right;}

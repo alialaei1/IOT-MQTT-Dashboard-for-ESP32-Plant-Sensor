@@ -19,7 +19,7 @@
             <!-- Username -->
             <div class="wrap-input100 validate-input" data-validate="نام کاربری را وارد کنید">
                 {{ signup_form.username }} {% for error in signup_form.username.errors %}
-                <p style="direction: rtl;color: red;">{{ error }}</p>
+                <p style="color: red;">{{ error }}</p>
                 {% endfor %}
                 <span class="focus-input100"></span>
                 <span class="symbol-input100"><i class="fa fa-user" aria-hidden="true"></i></span>
@@ -29,7 +29,7 @@
             <!-- Email -->
             <div class="wrap-input100 validate-input" data-validate="ایمیل معتبر: test@abc.com">
                 {{ signup_form.email }} {% for error in signup_form.email.errors %}
-                <p style="direction: rtl;color: red;">{{ error }}</p>
+                <p style="color: red;">{{ error }}</p>
                 {% endfor %}
                 <span class="focus-input100"></span>
                 <span class="symbol-input100">
@@ -41,7 +41,7 @@
             <!-- Password -->
             <div class="wrap-input100 validate-input" data-validate="گذرواژه را وارد کنید">
                 {{ signup_form.password }} {% for error in signup_form.password.errors %}
-                <p style="direction: rtl;color: red;">{{ error }}</p>
+                <p style="color: red;">{{ error }}</p>
                 {% endfor %}
                 <span class="focus-input100"></span>
                 <span class="symbol-input100">
@@ -61,7 +61,7 @@
 
             {% for error in signup_form.re_password.errors %}
             <div class="wrap-input100 inputerror"></div>
-            <p style="direction: rtl;color: red;">{{ error }}</p>
+            <p style="color: red;">{{ error }}</p>
     </div>
     {% endfor %}
 

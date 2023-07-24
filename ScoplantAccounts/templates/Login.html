@@ -7,13 +7,11 @@
     </div>
 
     <div class="login-form">
-        <div class="login100-pic">
-            <img src="{% static 'images/login-animation.gif' %} " alt="login-image" />
-        </div>
+
 
         <form class="login100-form" method='POST'>
             {% csrf_token %}
-            <span class="login100-form-title"> وارد شوید </span>
+            <span class="login100-form-title"> Login </span>
 
             <div class="wrap-input100 inputerror">
                 {{ login_form.username }}
@@ -25,12 +23,12 @@
 
             {% for error in login_form.username.errors %}
             <div class="wrap-input100 inputerror">
-                <p style="direction: rtl;color: red;">{{ error }}</p>
+                <p style=color: red;">{{ error }}</p>
             </div>{% endfor %}
 
             <div class="wrap-input100 inputerror">
                 {{ login_form.password }} {% for error in login_form.password.errors %}
-                <p style="direction: rtl;color: red;">{{ error }}</p> {% endfor %}
+                <p style="color: red;">{{ error }}</p> {% endfor %}
                 <span class="focus-input100"></span>
                 <span class="symbol-input100">
                     <i class="fa fa-lock" aria-hidden="true"></i>
@@ -39,29 +37,29 @@
 
             {% for error in login_form.password.errors %}
             <div class="wrap-input100 inputerror">
-                <p style="direction: rtl;color: red;">{{ error }}</p>
+                <p style="color: red;">{{ error }}</p>
             </div>
             {% endfor %}
 
             <div class="container-login100-form-btn">
-                <button class="login100-form-btn">ورود</button>
+                <button class="login100-form-btn">log in</button>
             </div>
 
             <div class="text-center p-t-12">
-                <span class="txt1"> فراموشی </span>
-                <a class="txt2" href="/password_reset">گذرواژه؟ </a>
+                <span class="txt1"> forget! </span>
+                <a class="txt2" href="/password_reset">Password? </a>
             </div>
 
             <div class="text-center p-t-12">
-                <span class="txt1">حساب کاربری ندارید؟ </span>
-                <a class="txt2" href="/signup"> ثبت نام کنید
-                                <i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i>
+                <span class="txt1">Don't have an account? </span>
+                <a class="txt2" href="/signup"> Sign up
+                    <i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i>
                                 </a>
             </div>
 
             <!-- social media buttons -->
             <div class="text-center p-t-100">
-                <p class="txt2">ورود با </p> <br>
+                <p class="txt2">Sign in with </p> <br>
                 <a href="">
                     <i class="fa fa-google fa-2x icon-social" aria-hidden="true"></i>
                 </a>
@@ -77,6 +75,14 @@
                 </a>
             </div>
         </form>
+
+
+
+
+
+        <div class="login100-pic">
+            <img src="{% static 'images/login-animation.gif' %} " alt="login-image" />
+        </div>
     </div>
 </div>
 {% endblock %}

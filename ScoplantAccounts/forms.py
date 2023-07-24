@@ -5,7 +5,7 @@ from django.core import validators
 class SignUpForm(forms.Form):
     username = forms.CharField(
         widget=forms.TextInput(
-            attrs={'placeholder': 'نام کاربری', 'class': 'input100','id':'signupUsernameInput'}),
+            attrs={'placeholder': 'Username', 'class': 'input100','id':'signupUsernameInput'}),
         validators=[
             validators.MaxLengthValidator(limit_value=20, message='تعداد کاراکترهای نام کاربری نباید بیشتر از 20 کاراکتر باشد')
         ]
@@ -58,31 +58,31 @@ class SignUpForm(forms.Form):
 class LoginForm(forms.Form):
     username = forms.CharField(
         widget=forms.TextInput(
-            attrs={'placeholder': 'نام کاربری', 'class': 'input100'}),
+            attrs={'placeholder': 'Username', 'class': 'input100'}),
     )
 
     password = forms.CharField(
         widget=forms.PasswordInput(
-            attrs={'placeholder': 'گذرواژه', 'class': 'input100'}),
+            attrs={'placeholder': 'Password', 'class': 'input100'}),
     )
 
     def clean_username(self):
         username = self.cleaned_data["username"]
         is_exists_user = User.objects.filter(username=username).exists()
         if not is_exists_user:
-            raise forms.ValidationError('کاربری با این نام کاربری یافت نشد')
+            raise forms.ValidationError('User with this username was not found')
         return username
 
 class ForgotPasswordForm(forms.Form):
     Username = forms.CharField(
         widget=forms.TextInput(
-            attrs={'placeholder': 'ایمیل را وارد کنید', 'class': 'input100','type':'email','name':'text1'}),
+            attrs={'placeholder': 'Enter email', 'class': 'input100','type':'email','name':'text1'}),
     )
 
     def clean_username(self):
         username = self.cleaned_data["Username"]
         is_exists_user = User.objects.filter(email=username).exists()
         if not is_exists_user:
-            raise forms.ValidationError('کاربری یافت نشد!')
+            raise forms.ValidationError('User not found!')
         return username
 
