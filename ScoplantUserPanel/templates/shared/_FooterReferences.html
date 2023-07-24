@@ -2,7 +2,8 @@
 
 <!-- jQuery -->
 
-<!-- <script src="{% static 'plugins/jquery/jquery.min.js' %}"></script> -->
+
+<!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
 
 <!-- jQuery UI 1.11.4 -->
 
@@ -47,6 +48,12 @@
 
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
+
+
+
+<script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
+
+
 <script>
 var customOptions = {
 			placeholder: "روز / ماه / سال"
@@ -74,8 +81,13 @@ var customOptions = {
 <script src="{% static 'plugins/morris/morris.min.js' %}"></script>
 <!-- Page script -->
 <script>
+
+	// $('body').persianNum({numberType:'decimal'});
+
     $(function () {
         //Initialize Select2 Elements
         $('.select2').select2()
+
+	})
 
 </script>
