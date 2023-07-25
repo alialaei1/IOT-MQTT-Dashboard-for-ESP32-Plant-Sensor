@@ -491,25 +491,25 @@ def reporting_device(request, device_id):
                 selectExport = "pdf- tabular"
                 paramtererfor = ''
                 if selectParameter == "Lux":
-                    paramtererfor = 'light intensity'
+                    paramtererfor = 'Light'
 
                 elif selectParameter == "Humidity":
-                    paramtererfor = 'moisture'
+                    paramtererfor = 'Moisture'
 
                 elif selectParameter == "Temperature":
-                    paramtererfor = 'temperature'
+                    paramtererfor = 'Temperature'
 
                 elif selectParameter == "Soil_Moisture":
-                    paramtererfor = 'soil moisture'
+                    paramtererfor = 'Soil moisture'
 
                 elif selectParameter == "Soil_tempurature":
-                    paramtererfor = 'soil temperature'
+                    paramtererfor = 'Soil temperature'
 
                 elif selectParameter == "EC":
                     paramtererfor = 'EC'
 
                 elif selectParameter == "Total":
-                    paramtererfor = 'output all data'
+                    paramtererfor = 'Output all data'
 
                 context = {
                     'title': 'output PDF',
