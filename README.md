@@ -35,6 +35,8 @@ This Django project is designed to be easy to set up and run. Here are the steps
 ### Prerequisites
 Before you can run this Django project, you need to have the following software installed:
 
+Download and install MongoDB from  <a href="https://www.mongodb.com/try/download/community?tck=docs_server">here</a>
+
 Python 3.6 or later
 
 ### Installation
