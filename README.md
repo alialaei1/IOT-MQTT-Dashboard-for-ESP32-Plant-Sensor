@@ -4,16 +4,16 @@
 
 
 Scoplant - The IoT MQTT Django dashboard for ESP32 (TTGO T-Higrow) is a project that provides a web-based dashboard for monitoring and controlling environmental conditions using an ESP32-based sensor device. The project utilizes the MQTT protocol for seamless communication between the sensor device and the dashboard, allowing real-time updates on the status of the environment being monitored.
-<br><br>
-<div align="center"><a href="#"><img src="assets/images/v4.PNG"  width="1600"></a><br><br></div>
+<br>
+<div align="center"><a href="#"><img src="assets/images/v4.PNG"  width="1600"></a><br></div>
 
 The TTGO T-Higrow device is equipped with sensors that measure various environmental parameters such as temperature, humidity, and light intensity. These measurements are transmitted to the MQTT broker, which then forwards the data to the Django backend for processing. The Django backend is responsible for storing and processing the data, as well as handling user authentication and authorization.
-<br><br>
-<div align="center"><a href="#"><img src="assets/images/v2.PNG"  width="1600"></a><br><br></div>
+<br>
+<div align="center"><a href="#"><img src="assets/images/v2.PNG"  width="1600"></a><br></div>
 
 The web-based dashboard is designed using Django's templating system and is optimized for desktop and mobile devices. The dashboard displays the data in an intuitive and user-friendly manner, allowing users to monitor the environmental conditions at a glance. The dashboard also features controls that allow users to adjust the settings of the sensor device, such as the frequency of data transmission and the threshold values for triggering alerts.
-<br><br>
-<div align="center"><a href="#"><img src="assets/images/v3.PNG"  width="1600"></a><br><br></div>
+<br>
+<div align="center"><a href="#"><img src="assets/images/v3.PNG"  width="1600"></a><br></div>
 
 Overall, this project has the potential to be a valuable tool for anyone who needs to remotely monitor and control their IoT devices. By creating a system that connects an MQTT device to a dashboard, users can receive real-time insights into the performance of their devices and take action when necessary.
 <br>
