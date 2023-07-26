@@ -24,7 +24,7 @@ Overall, the IoT MQTT Django dashboard for ESP32 (TTGO T-Higrow) provides a powe
 ## Hardware
 
 <div align="center"><br><br>
-<img src="assets/images/h2.png" target="_blank" /></div>
+<img src="assets/images/v5.PNG" target="_blank" /></div>
 
 The TTGO-T-HIGrow project is an open-source hardware and software solution for monitoring environmental conditions using an ESP32-based sensor device. The project provides a comprehensive set of resources for users to design and build their own TTGO-T-HIGrow sensor devices, including schematics, PCB layouts, and firmware code.
 
