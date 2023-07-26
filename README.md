@@ -18,7 +18,7 @@ The web-based dashboard is designed using Django's templating system and is opti
 Overall, the IoT MQTT Django dashboard for ESP32 (TTGO T-Higrow) provides a powerful and flexible solution for monitoring and controlling environmental conditions using IoT technology. With its web-based interface, efficient communication protocol, this project is sure to be a valuable tool for environmental enthusiasts and researchers.
 
 <br><br>
-<div align="center"><a href="#"><img src="assets/images/v1.png"  width="1600"></a><br><br></div>
+<div align="center"><a href="#"><img src="assets/images/v4.PNG"  width="1600"></a><br><br></div>
 
 
 
