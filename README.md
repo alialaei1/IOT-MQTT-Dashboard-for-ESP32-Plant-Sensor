@@ -20,7 +20,7 @@ Overall, this project has the potential to be a valuable tool for anyone who nee
 <div align="center"><a href="#"><img src="assets/images/v1.png"  width="1600"></a><br><br></div>
 
 
-## MQTT protocol
+## MQTT Protocol
 <div align="center"><br><br>
 <img src="assets/images/v6.PNG" target="_blank"width="600" /></div>
 
