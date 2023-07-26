@@ -20,6 +20,15 @@ Overall, the IoT MQTT Django dashboard for ESP32 (TTGO T-Higrow) provides a powe
 <div align="center"><a href="#"><img src="assets/images/v1.png"  width="1600"></a><br><br></div>
 
 
+## MQTT
+
+
+This project aims to create a system that connects an MQTT device to a dashboard, enabling users to remotely monitor and control their IoT devices. MQTT is a lightweight messaging protocol that is commonly used for transmitting telemetry data from IoT devices to other devices or servers. A dashboard, on the other hand, is a visual interface that provides real-time insights into data and allows for remote monitoring and control of devices.
+
+To achieve this, the project will involve several components, including an MQTT broker, a web server, and a user interface that displays the data in a user-friendly format. The MQTT device will send telemetry data to the broker, which will then forward it to the web server. The web server will process the data and display it on the dashboard in real-time.
+
+Overall, this project has the potential to be a valuable tool for anyone who needs to remotely monitor and control their IoT devices. By creating a system that connects an MQTT device to a dashboard, users can receive real-time insights into the performance of their devices and take action when necessary.
+
 
 ## Hardware
 
