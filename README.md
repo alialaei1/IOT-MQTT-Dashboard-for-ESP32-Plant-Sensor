@@ -22,7 +22,7 @@ Overall, this project has the potential to be a valuable tool for anyone who nee
 
 ## MQTT
 <div align="center"><br><br>
-<img src="assets/images/v6.PNG" target="_blank"width="800" /></div>
+<img src="assets/images/v6.PNG" target="_blank"width="600" /></div>
 
 
 This project aims to create a system that connects an MQTT device to a dashboard, enabling users to remotely monitor and control their IoT devices. MQTT is a lightweight messaging protocol that is commonly used for transmitting telemetry data from IoT devices to other devices or servers. A dashboard, on the other hand, is a visual interface that provides real-time insights into data and allows for remote monitoring and control of devices.
@@ -34,7 +34,7 @@ To achieve this, the project will involve several components, including an MQTT 
 ## Hardware
 
 <div align="center"><br><br>
-<img src="assets/images/v5.PNG" target="_blank"width="800" /></div>
+<img src="assets/images/v5.PNG" target="_blank"width="600" /></div>
 
 The TTGO-T-HIGrow project is an open-source hardware and software solution for monitoring environmental conditions using an ESP32-based sensor device. The project provides a comprehensive set of resources for users to design and build their own TTGO-T-HIGrow sensor devices, including schematics, PCB layouts, and firmware code.
 
